@@ -2,6 +2,11 @@ type FlagProps = { x: number; y: number; w: number; h: number }
 
 // Small flat-shape flags (no emoji) so they render identically on every
 // device/browser instead of depending on OS emoji-font support.
+//
+// This is the cargolord.com variant: three prominent routes (Pakistan,
+// India, Europe) rather than cargolord.co.uk's single Pakistan-only
+// route, reflecting the actual broader positioning of this site without
+// changing the shared navy/orange design system.
 
 function FlagPakistan({ x, y, w, h }: FlagProps) {
   const stripeW = w * 0.25
@@ -30,6 +35,26 @@ function FlagIndia({ x, y, w, h }: FlagProps) {
       <rect y={h / 3} width={w} height={h / 3} fill="#ffffff" />
       <rect y={(h * 2) / 3} width={w} height={h / 3} fill="#138808" />
       <circle cx={w / 2} cy={h / 2} r={h * 0.09} fill="#000080" />
+    </g>
+  )
+}
+
+function FlagEurope({ x, y, w, h }: FlagProps) {
+  // Simplified EU flag: blue field, ring of 12 small stars.
+  const cx = w / 2
+  const cy = h / 2
+  const ringR = h * 0.3
+  const starR = h * 0.05
+  const stars = Array.from({ length: 12 }, (_, i) => {
+    const angle = (i / 12) * Math.PI * 2 - Math.PI / 2
+    return { x: cx + ringR * Math.cos(angle), y: cy + ringR * Math.sin(angle) }
+  })
+  return (
+    <g transform={`translate(${x - w / 2}, ${y - h / 2})`}>
+      <rect width={w} height={h} fill="#003399" />
+      {stars.map((s, i) => (
+        <circle key={i} cx={s.x} cy={s.y} r={starR} fill="#ffcc00" />
+      ))}
     </g>
   )
 }
@@ -93,13 +118,24 @@ function Destination({
         y={labelY}
         textAnchor="middle"
         fill={prominent ? '#fb923c' : '#94a3b8'}
-        fontSize={prominent ? 26 : 14}
+        fontSize={prominent ? 24 : 14}
         fontWeight={prominent ? 800 : 600}
         fontFamily="'Barlow Condensed', sans-serif"
         letterSpacing={prominent ? 2 : 1}
       >
         {label}
       </text>
+    </g>
+  )
+}
+
+function Plane({ x, y, rotate }: { x: number; y: number; rotate: number }) {
+  return (
+    <g transform={`translate(${x}, ${y}) rotate(${rotate})`}>
+      <path
+        d="M0 0 L34 6 L46 0 L34 -6 Z M20 -2 L28 -22 L34 -22 L30 -2 Z M20 2 L28 22 L34 22 L30 2 Z"
+        fill="#fb923c"
+      />
     </g>
   )
 }
@@ -126,29 +162,22 @@ export default function RouteGraphic() {
       <rect width="1600" height="900" fill="#0a1628" />
       <rect width="1600" height="900" fill="url(#dotGrid)" />
 
-      {/* Secondary routes -- muted, no plane, drawn first so the Pakistan route sits on top */}
+      {/* Secondary routes -- muted, no plane, "and worldwide" context */}
       <path d="M 260 560 C 520 240, 760 180, 950 175" fill="none" stroke="#2d4a6b" strokeWidth="1.5" strokeDasharray="6 8" opacity="0.6" />
       <path d="M 260 560 C 520 660, 780 720, 1045 700" fill="none" stroke="#2d4a6b" strokeWidth="1.5" strokeDasharray="6 8" opacity="0.6" />
       <path d="M 260 560 C 560 700, 900 790, 1205 760" fill="none" stroke="#2d4a6b" strokeWidth="1.5" strokeDasharray="6 8" opacity="0.6" />
-      <path d="M 260 560 C 620 540, 1150 600, 1475 600" fill="none" stroke="#2d4a6b" strokeWidth="1.5" strokeDasharray="6 8" opacity="0.6" />
 
-      {/* Main route: Birmingham -> Pakistan (kept prominent) */}
-      <path
-        d="M 260 560 C 560 300, 980 760, 1360 420"
-        fill="none"
-        stroke="url(#pathFade)"
-        strokeWidth="4"
-        strokeDasharray="10 12"
-        strokeLinecap="round"
-      />
+      {/* Three prominent routes: Pakistan, India, Europe -- the three
+          markets this site actually covers, drawn before the markers so
+          the markers + planes sit on top */}
+      <path d="M 260 560 C 560 300, 980 760, 1360 420" fill="none" stroke="url(#pathFade)" strokeWidth="4" strokeDasharray="10 12" strokeLinecap="round" />
+      <path d="M 260 560 C 620 540, 1100 540, 1460 530" fill="none" stroke="url(#pathFade)" strokeWidth="4" strokeDasharray="10 12" strokeLinecap="round" />
+      <path d="M 260 560 C 420 420, 520 320, 640 265" fill="none" stroke="url(#pathFade)" strokeWidth="4" strokeDasharray="10 12" strokeLinecap="round" />
 
-      {/* Plane icon on the Pakistan route only */}
-      <g transform="translate(1170, 525) rotate(-26)">
-        <path
-          d="M0 0 L34 6 L46 0 L34 -6 Z M20 -2 L28 -22 L34 -22 L30 -2 Z M20 2 L28 22 L34 22 L30 2 Z"
-          fill="#fb923c"
-        />
-      </g>
+      {/* Planes on each prominent route */}
+      <Plane x={1170} y={525} rotate={-26} />
+      <Plane x={1120} y={535} rotate={-2} />
+      <Plane x={470} y={360} rotate={-40} />
 
       {/* Origin marker: Birmingham, UK */}
       <g transform="translate(260, 560)">
@@ -169,20 +198,15 @@ export default function RouteGraphic() {
         </text>
       </g>
 
-      {/* Secondary destinations -- small, muted */}
+      {/* Secondary destinations -- small, muted, "and worldwide" context */}
       <Destination x={950} y={175} label="USA" flag={<FlagUSA x={0} y={26} w={34} h={22} />} />
       <Destination x={1045} y={700} label="SAUDI ARABIA" flag={<FlagSaudi x={0} y={26} w={34} h={22} />} />
       <Destination x={1205} y={760} label="UAE" flag={<FlagUAE x={0} y={26} w={34} h={22} />} />
-      <Destination x={1475} y={600} label="INDIA" flag={<FlagIndia x={0} y={26} w={34} h={22} />} />
 
-      {/* Primary destination: Pakistan -- the hero route, kept visually dominant */}
-      <Destination
-        x={1360}
-        y={420}
-        label="PAKISTAN"
-        prominent
-        flag={<FlagPakistan x={0} y={-78} w={62} h={40} />}
-      />
+      {/* Three prominent destinations -- Pakistan, India, Europe */}
+      <Destination x={1360} y={420} label="PAKISTAN" prominent flag={<FlagPakistan x={0} y={-74} w={56} h={36} />} />
+      <Destination x={1460} y={530} label="INDIA" prominent flag={<FlagIndia x={0} y={-74} w={56} h={36} />} />
+      <Destination x={640} y={265} label="EUROPE" prominent flag={<FlagEurope x={0} y={-74} w={56} h={36} />} />
     </svg>
   )
 }
