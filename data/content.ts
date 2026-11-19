@@ -387,6 +387,42 @@ This route runs both ways — Saudi Arabia to UK, and UK to Saudi Arabia — so 
 
 Because every personal effects shipment on this route is a little different — number of boxes or suitcases, total weight, collection location, and which direction you're going — the best way to get an accurate cost is to just tell us what you're moving and where from and to. We'll give you a straight answer on the best option for your specific move, not a generic rate that doesn't reflect what you're actually sending.`,
   },
+  {
+    slug: 'volumetric-weight-vs-actual-weight',
+    title: 'Volumetric Weight vs. Actual Weight: How It Works and How to Save Money on Your Cargo',
+    date: '2026-11-19',
+    category: 'Cost Guide',
+    excerpt: "Your cargo is priced on whichever is greater — the weight on the scale, or the size of the box. Here's how that calculation actually works, and how to avoid paying for empty air.",
+    image: '/blog/volumetric-weight.svg',
+    content: `When sending international cargo from the UK to Pakistan or anywhere else in the world, your shipping cost is calculated using whichever is greater: the actual (dead) weight on the scale, or the volumetric weight based on the parcel's dimensions. Because aircraft cargo holds and shipping containers have strict space limits, large, lightweight boxes take up valuable room and are priced accordingly.
+
+**Why Do Cargo Companies Use Volumetric Weight?**
+
+Airlines and freight carriers operate within tight physical boundaries — especially in air freight, where cargo is loaded onto specialised Unit Load Devices (ULDs) and aircraft pallets.
+
+- **Aircraft space constraints:** If a parcel is oversized or awkwardly shaped, it can't be stacked efficiently inside a standard ULD container and has to be loaded onto an open or loose pallet instead, taking up disproportionate space.
+- **Balancing weight and volume:** A plane or container can run out of physical floor space long before it reaches its maximum weight limit. Charging by volumetric weight ensures freight space is priced fairly whether you're shipping dense machinery or bulky duvets.
+
+**How Volumetric Weight Is Calculated**
+
+To find the volumetric weight of your shipment, measure the length, width and height of your box in centimetres, multiply them together, then divide by the standard freight divisor.
+
+Volumetric weight (kg) = Length (cm) &times; Width (cm) &times; Height (cm) &divide; 5000
+
+While some couriers and freight operators use a divisor of 4,000 — which results in a higher chargeable weight — at Cargo Lord Ltd we use the 5,000 divisor for air cargo, which gives our customers a fairer, more cost-effective rate. Once calculated, we compare this figure against the dead weight (the actual weight on the scale) and bill based on whichever number is higher.
+
+**Practical Tips to Avoid Paying for Empty Air**
+
+You can keep your shipping costs down on both air and sea cargo by packing smarter before collection.
+
+- **Aim for dense, compact parcels:** Whenever possible, pack heavy items tightly so your actual weight meets or exceeds your volumetric weight. Shipping large boxes filled with lightweight items means paying for empty air.
+- **Don't over-box for "extra protection":** A common mistake is putting a small item inside a much bigger box, thinking the extra space will keep it safer. Unless you're shipping something genuinely delicate that needs thick protective cushioning to survive transit, oversized packaging just wastes money.
+- **Use properly fitted cartons:** Trim down excess box height, or choose a sturdy double-wall box that fits your goods snugly without bulging sides.
+
+**Need Help Packing or Calculating Your Quote?**
+
+If you're unsure how to pack an awkward item, or you don't have suitable boxes on hand, get in touch with our team before shipping. We advise customers every day on the most economical way to pack and ship personal effects and commercial goods from the UK to Pakistan, India, Saudi Arabia, and worldwide — just tell us what you're sending and we'll help you get the most cost-effective shipment possible.`,
+  },
 ]
 
 // Tracking statuses — matches the stage names used across the CRM/ops

@@ -10,9 +10,20 @@ import { blogPosts } from '../../data/content'
 export default function BlogPost({ post }: { post: typeof blogPosts[0] }) {
   if (!post) return null
 
-  // Simple markdown-ish render for **bold** and newlines
+  // Simple markdown-ish render for **bold**, newlines, and "- " bullet lists
   const renderContent = (text: string) =>
     text.split('\n\n').map((para, i) => {
+      const lines = para.split('\n')
+      const isList = lines.length > 0 && lines.every((l) => l.trim().startsWith('- '))
+      if (isList) {
+        return (
+          <ul key={i} className="list-disc pl-5 text-gray-600 leading-relaxed mb-4 space-y-1">
+            {lines.map((l, j) => (
+              <li key={j} dangerouslySetInnerHTML={{ __html: l.trim().slice(2).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+            ))}
+          </ul>
+        )
+      }
       const withBold = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       if (para.startsWith('**') && para.trim().endsWith('**')) {
         return <h3 key={i} className="font-heading font-bold text-navy-800 text-xl mt-6 mb-2" dangerouslySetInnerHTML={{ __html: withBold }} />

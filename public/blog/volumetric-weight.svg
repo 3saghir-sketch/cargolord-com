@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg7L" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0C1535"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <linearGradient id="bg7R" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#071022"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="400" height="450" fill="url(#bg7L)"/>
+  <rect x="400" y="0" width="400" height="450" fill="url(#bg7R)"/>
+  <rect x="397" y="0" width="6" height="450" fill="#f97316"/>
+  <circle cx="400" cy="225" r="26" fill="#0a1628" stroke="#fb923c" stroke-width="2.5"/>
+  <text x="400" y="233" text-anchor="middle" fill="#fb923c" font-size="16" font-weight="800" font-family="Arial, sans-serif">VS</text>
+
+  <!-- Left: Volumetric weight, box with dimension arrows -->
+  <text x="200" y="52" text-anchor="middle" fill="#fff" font-size="21" font-weight="800" font-family="Arial, sans-serif" letter-spacing="0.5">VOLUMETRIC WEIGHT</text>
+  <text x="200" y="74" text-anchor="middle" fill="#fb923c" font-size="12" font-weight="700" font-family="Arial, sans-serif" letter-spacing="2">BASED ON SIZE</text>
+
+  <!-- 3D box -->
+  <g transform="translate(200,225)">
+    <path d="M-70,-10 L0,-45 L70,-10 L70,55 L0,90 L-70,55 Z" fill="#0f2a4a" stroke="#60a5fa" stroke-width="2"/>
+    <path d="M-70,-10 L0,25 L70,-10" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <path d="M0,25 L0,90" fill="none" stroke="#60a5fa" stroke-width="2"/>
+
+    <!-- dimension arrows -->
+    <line x1="-95" y1="-10" x2="-95" y2="55" stroke="#fb923c" stroke-width="2"/>
+    <line x1="-100" y1="-10" x2="-90" y2="-10" stroke="#fb923c" stroke-width="2"/>
+    <line x1="-100" y1="55" x2="-90" y2="55" stroke="#fb923c" stroke-width="2"/>
+    <text x="-112" y="26" text-anchor="middle" fill="#fdba74" font-size="13" font-weight="700" font-family="Arial, sans-serif" transform="rotate(-90,-112,26)">H</text>
+
+    <line x1="-70" y1="78" x2="0" y2="113" stroke="#fb923c" stroke-width="2"/>
+    <line x1="-70" y1="78" x2="-62" y2="83" stroke="#fb923c" stroke-width="2"/>
+    <line x1="0" y1="113" x2="-8" y2="108" stroke="#fb923c" stroke-width="2"/>
+    <text x="-38" y="104" text-anchor="middle" fill="#fdba74" font-size="13" font-weight="700" font-family="Arial, sans-serif">L</text>
+
+    <line x1="0" y1="113" x2="70" y2="78" stroke="#fb923c" stroke-width="2"/>
+    <line x1="70" y1="78" x2="62" y2="83" stroke="#fb923c" stroke-width="2"/>
+    <text x="38" y="104" text-anchor="middle" fill="#fdba74" font-size="13" font-weight="700" font-family="Arial, sans-serif">W</text>
+  </g>
+
+  <rect x="90" y="370" width="220" height="42" rx="6" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.2"/>
+  <text x="200" y="396" text-anchor="middle" fill="#cbd5e1" font-size="13" font-weight="700" font-family="Arial, sans-serif">L &#215; W &#215; H &#247; 5000</text>
+
+  <!-- Right: Actual weight, scale -->
+  <text x="600" y="52" text-anchor="middle" fill="#fff" font-size="21" font-weight="800" font-family="Arial, sans-serif" letter-spacing="0.5">ACTUAL WEIGHT</text>
+  <text x="600" y="74" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="700" font-family="Arial, sans-serif" letter-spacing="2">BASED ON SCALE</text>
+
+  <g transform="translate(600,250)">
+    <rect x="-55" y="-55" width="110" height="80" rx="10" fill="#1e3a5f"/>
+    <circle cx="0" cy="-70" r="34" fill="none" stroke="#60a5fa" stroke-width="5"/>
+    <rect x="-7" y="-28" width="14" height="10" fill="#1e3a5f"/>
+    <text x="0" y="-62" text-anchor="middle" fill="#93c5fd" font-size="20" font-weight="800" font-family="Arial, sans-serif">kg</text>
+    <rect x="-70" y="25" width="140" height="10" rx="3" fill="#1e3a5f"/>
+    <rect x="-60" y="35" width="120" height="8" rx="2" fill="#15233d"/>
+  </g>
+
+  <rect x="490" y="370" width="220" height="42" rx="6" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.2"/>
+  <text x="600" y="396" text-anchor="middle" fill="#cbd5e1" font-size="13" font-weight="700" font-family="Arial, sans-serif">Weighed on collection</text>
+
+  <text x="400" y="430" text-anchor="middle" fill="#fdba74" font-size="13" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">YOU PAY FOR WHICHEVER IS GREATER</text>
+</svg>
