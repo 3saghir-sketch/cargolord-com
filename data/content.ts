@@ -62,7 +62,7 @@ export const company = {
   // site as a reasonable placeholder. Confirm actual hours and social
   // handles before launch.
   hours: 'Mon–Fri 10:00–18:00 | Sat 10:00–14:00',
-  agentPortalUrl: 'https://agent.cargolord.com',
+  agentPortalUrl: 'https://portal.cargolord.com',
   social: {
     twitter: 'https://twitter.com/cargolord',
     facebook: 'https://facebook.com/cargolord',
