@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0C1535"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg4)"/>
+  <g opacity="0.25">
+    <circle cx="700" cy="50" r="1.4" fill="#fff"/>
+    <circle cx="60" cy="90" r="1.4" fill="#fff"/>
+    <circle cx="90" cy="400" r="1.4" fill="#fff"/>
+  </g>
+
+  <!-- Clipboard -->
+  <g transform="translate(260,225)">
+    <rect x="-110" y="-150" width="220" height="300" rx="10" fill="#f1f5f9"/>
+    <rect x="-35" y="-166" width="70" height="26" rx="6" fill="#94a3b8"/>
+    <rect x="-85" y="-115" width="170" height="26" rx="4" fill="#e2e8f0"/>
+    <rect x="-85" y="-75" width="170" height="26" rx="4" fill="#e2e8f0"/>
+    <rect x="-85" y="-35" width="170" height="26" rx="4" fill="#e2e8f0"/>
+    <rect x="-85" y="5" width="170" height="26" rx="4" fill="#e2e8f0"/>
+
+    <g transform="translate(-70,-102)">
+      <circle r="11" fill="#16a34a"/>
+      <path d="M-5 0 L-1.5 4.5 L6 -5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(-70,-62)">
+      <circle r="11" fill="#16a34a"/>
+      <path d="M-5 0 L-1.5 4.5 L6 -5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(-70,-22)">
+      <circle r="11" fill="#dc2626"/>
+      <line x1="-5" y1="-5" x2="5" y2="5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="5" y1="-5" x2="-5" y2="5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(-70,18)">
+      <circle r="11" fill="#16a34a"/>
+      <path d="M-5 0 L-1.5 4.5 L6 -5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Customs stamp -->
+  <g transform="translate(560,160) rotate(-18)">
+    <circle r="62" fill="none" stroke="#fb923c" stroke-width="4" opacity="0.85"/>
+    <circle r="50" fill="none" stroke="#fb923c" stroke-width="2" opacity="0.6"/>
+    <text x="0" y="-6" text-anchor="middle" fill="#fb923c" font-size="13" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">CUSTOMS</text>
+    <text x="0" y="14" text-anchor="middle" fill="#fb923c" font-size="13" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">CHECKED</text>
+  </g>
+
+  <text x="560" y="300" text-anchor="middle" fill="#fff" font-size="18" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">KNOW BEFORE</text>
+  <text x="560" y="326" text-anchor="middle" fill="#fff" font-size="18" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">YOU SEND</text>
+</svg>

@@ -143,9 +143,13 @@ export const services = [
 // fake reviews — fill this in only with real collected reviews.
 export const testimonials: { name: string; location: string; rating: number; text: string }[] = []
 
-// Blog posts — none carried over; the reference site's posts were dated
-// 2024 and tied to since-unverifiable pricing claims. Start empty and add
-// real, current posts.
+// Blog posts — the old cargolord.com posts were dated 2024 and tied to
+// since-unverifiable pricing claims, so none were carried over. These five
+// are new, written for this relaunch: practical, no invented prices or
+// stats, pointing readers to a quote for exact costs. Images are
+// hand-built SVG illustrations (navy/orange brand palette) rather than
+// stock photography, so there's no licensing question and no generic
+// "freight warehouse" photo that could belong to any company.
 export const blogPosts: {
   slug: string
   title: string
@@ -154,7 +158,199 @@ export const blogPosts: {
   excerpt: string
   content: string
   image?: string
-}[] = []
+}[] = [
+  {
+    slug: 'how-to-send-cargo-to-pakistan-from-uk',
+    title: 'How to Send Cargo to Pakistan from the UK: A Complete Step-by-Step Guide',
+    date: '2026-11-19',
+    category: 'Shipping Guide',
+    excerpt: 'Sending a shipment to Pakistan for the first time? Here is exactly what happens from the moment you book collection to the moment it lands at the door in Pakistan — no jargon, no guesswork.',
+    image: '/blog/send-cargo-guide.svg',
+    content: `If you have never shipped cargo to Pakistan before, the whole process can feel like a bit of a mystery. You know you want your boxes, suitcases, or household goods to get from your home in the UK to a family member's doorstep in Lahore, Karachi, Islamabad or anywhere else — but what actually happens in between? This guide walks through it step by step, in plain English.
+
+**Step 1: Work out what you're sending**
+
+Before you book anything, have a rough idea of what you're shipping — personal effects and clothing, kitchen items, electronics, or a mix of household goods. This matters because it affects which service suits you best: a couple of suitcases of clothes is usually better suited to an excess baggage service, while several boxes of household items are better suited to standard air or sea cargo. If you're not sure which applies to you, just describe what you have when you call or message — a decent cargo company will point you in the right direction rather than sell you whatever is most convenient for them.
+
+**Step 2: Choose air or sea**
+
+Air cargo is faster and suits anything time-sensitive — gifts for an upcoming wedding, medicine, or anything you need to land within days rather than weeks. Sea cargo takes longer but is the more economical option for bulkier, heavier shipments where speed isn't critical — furniture, large quantities of household goods, or anything you're not in a rush for. We've written a separate guide comparing the two in more depth if you want to think it through properly.
+
+**Step 3: Book a collection**
+
+Most UK-based cargo companies serving Pakistan, including us, will collect directly from your home or workplace — you don't need to drop anything off at a depot yourself unless that's easier for you. When you book, you'll be asked for the collection address, a rough idea of the number of items and total weight, and the delivery address in Pakistan. Have the Pakistan-side recipient's full name and a working phone number ready — customs and the local delivery team will need to reach them.
+
+**Step 4: Pack properly**
+
+This is the step most people underestimate, and it's the single biggest reason shipments arrive damaged. Use sturdy boxes, not bags or loosely taped containers. Wrap anything breakable individually. Don't overpack a box to the point where the sides bulge — that's when seams split in transit. We've put together a full packing guide with more detail if you want to get this right the first time.
+
+**Step 5: Know what you can and can't send**
+
+Pakistan customs, like any country's, has a list of restricted and prohibited items — certain electronics, specific foodstuffs, and anything that looks commercial in quantity can all cause delays or get held at customs. It's worth a quick read of our customs guide before you pack anything questionable, so you're not caught out.
+
+**Step 6: Documentation**
+
+For most personal shipments, you won't need to prepare much yourself — the cargo company handles the export paperwork and customs declaration. What you will need is a clear, accurate description of the contents (not just "household goods" — actually list what's in each box) and the recipient's details. Vague or inaccurate descriptions are one of the most common causes of customs delays, so it's worth the extra two minutes to get this right.
+
+**Step 7: Track it**
+
+Once your shipment is collected, you should be able to track its progress — when it's dispatched, when it departs the UK, when it arrives in Pakistan, and when it's out for final delivery. If a company can't offer you basic tracking, that's a red flag.
+
+**Step 8: Delivery in Pakistan**
+
+Depending on the service you've chosen, your shipment will either be delivered door-to-door to the recipient's address, or arrive at a port/airport for collection (port-to-port), which is usually the cheaper option if someone on the Pakistan side is able to collect it themselves.
+
+**The honest bottom line**
+
+There's no single "best" way to send cargo to Pakistan — it depends on what you're sending, how quickly you need it there, and your budget. The fastest way to find out what's right for your specific shipment is simply to describe it to us and ask for a quote — we'll tell you honestly which service makes sense, rather than pushing the most expensive option.`,
+  },
+  {
+    slug: 'air-freight-vs-sea-cargo-to-pakistan',
+    title: 'Air Freight vs Sea Cargo to Pakistan: Which Should You Choose?',
+    date: '2026-11-19',
+    category: 'Cost Guide',
+    excerpt: "Air cargo and sea cargo both get your shipment to Pakistan — but they suit very different situations. Here is how to work out which one is actually right for what you're sending.",
+    image: '/blog/air-vs-sea.svg',
+    content: `One of the first questions almost every new customer asks us is some version of: "should I send this by air or by sea?" It's a fair question, and the honest answer is: it depends on what you're shipping and how soon you need it there. Here's how to think it through properly.
+
+**Speed: air wins, clearly**
+
+If something needs to arrive quickly — a birthday gift, something for an upcoming event, medicine, or anything with a deadline — air cargo is the obvious choice. It's simply a faster route, start to finish, than sea freight will ever be. If timing matters more than cost, this question answers itself.
+
+**Cost: sea is generally the more economical route**
+
+Sea freight is typically the more cost-effective option, especially for bulkier or heavier shipments, because you're sharing container space on a much larger scale than an aircraft hold allows. If you're shipping furniture, large volumes of household items, or anything where a few extra weeks in transit genuinely doesn't matter to you, sea cargo is usually the sensible economical choice.
+
+**Weight and volume: sea suits bulk, air suits lighter loads**
+
+Air cargo pricing is sensitive to weight and dimensions in a way sea freight generally isn't — so a few heavy or bulky boxes can get expensive quickly by air. If you're moving a genuinely large volume (think: relocating a household, not sending a few parcels), sea cargo almost always makes more financial sense, assuming you can plan around the longer transit time.
+
+**Transit time: plan accordingly**
+
+Air cargo transit times are measured in days. Sea cargo transit times are measured in weeks. This isn't a knock against sea freight — it's just physics, container ships are slower than aircraft — but it does mean sea cargo needs to be planned ahead of time. If you're shipping goods for a specific date (a wedding, a house move-in date, Eid), work backwards from that date and build in a safety margin, because sea freight schedules can be affected by factors outside anyone's control — port congestion, customs processing time, weather.
+
+**Door-to-door vs port-to-port**
+
+Both air and sea cargo are typically available as either door-to-door (we collect from you in the UK and deliver to the recipient's address in Pakistan) or port-to-port (delivered to Karachi Port or Port Qasim, with collection and clearance handled by the recipient or someone on their behalf). Port-to-port is generally the lower-cost option if someone in Pakistan is able to handle collection — but it does put more responsibility on the receiving end, so it's worth confirming whoever's collecting is comfortable with that before you choose it.
+
+**A simple way to decide**
+
+Ask yourself two questions: How soon do I actually need this there? And how much am I shipping? If the answer to the first is "as soon as possible" — go air. If the answer to the second is "a lot, and I'm not in a rush" — go sea. Most shipments fall clearly into one camp or the other once you ask it this way. And if you're genuinely unsure, just tell us what you're sending and roughly when you need it there — we'll give you a straight answer on which service actually fits, not just whichever is more profitable for us to sell.`,
+  },
+  {
+    slug: 'how-to-pack-your-parcel-for-pakistan',
+    title: 'How to Pack Your Parcel for Pakistan So It Arrives in One Piece',
+    date: '2026-11-19',
+    category: 'Packing Tips',
+    excerpt: "Most damage in transit isn't bad luck — it's avoidable packing mistakes. Here is how to pack a box for a long-distance UK to Pakistan shipment properly, the first time.",
+    image: '/blog/packing-guide.svg',
+    content: `Your shipment to Pakistan is going to be loaded, stacked, moved between vehicles, and handled by a number of different people before it reaches the door. That's simply the nature of international freight, whichever company you use. The good news is that properly packed boxes handle all of that without any issue — and the vast majority of damage we see in transit, across the whole industry, comes down to a handful of avoidable packing mistakes. Here's how to get it right.
+
+**Use a proper box, not a bag**
+
+Plastic bags, loosely taped cardboard, or repurposed boxes that have already been through one house move are not going to survive a long-distance international shipment. Use a new or genuinely sturdy double-wall cardboard box. If you're reusing a box, check the corners and seams carefully for existing weakness before you trust it with anything fragile.
+
+**Don't overpack — and don't underpack**
+
+A box that's overstuffed to the point where the lid bulges outward is under constant strain, and that's exactly where seams split during handling. On the other hand, a box that's only half full will let its contents shift around in transit, which is just as likely to cause damage. The goal is a box that's genuinely full, with everything snug, but closing flat without bulging.
+
+**Wrap fragile items individually**
+
+Don't just throw bubble wrap loosely over a pile of breakables and call it done. Wrap each fragile item on its own, then pack them so they can't knock against each other or against the sides of the box. For anything genuinely fragile — glassware, electronics, anything ceramic — extra padding at the corners of the box (where impact is most likely) makes a real difference.
+
+**Use proper tape, properly applied**
+
+Masking tape and cheap sticky tape are not made for this job — use proper parcel tape, and reinforce the bottom seam as well as the top. A box that's well-sealed on top but weak on the bottom is a common and completely avoidable cause of a box bursting open mid-transit.
+
+**Label clearly — and write the contents description honestly**
+
+Make sure the recipient's name, full address, and a working contact phone number are clearly written or printed on the outside of the box. Just as importantly: when you're asked to describe the contents for the shipment paperwork, be specific and accurate. "Household goods" as a vague catch-all description is one of the most common reasons shipments get held up at customs — a clear, itemised description moves through processing far more smoothly.
+
+**Think about weight distribution**
+
+If you're packing multiple boxes, try to spread heavier items across several boxes rather than putting everything heavy into one and leaving the others nearly empty. This isn't just about cost (weight-based pricing applies either way) — a box that's dramatically heavier than its size suggests is more likely to be mishandled, because handlers aren't expecting the weight.
+
+**Electronics need extra care**
+
+If you're shipping any electronics, use the original packaging if you still have it — it's designed for exactly this. If not, make sure the item is fully wrapped and padded on all sides, with no room to move inside the box, and clearly note it's electronic/fragile on the outside.
+
+**When in doubt, ask**
+
+If you're packing something unusual or valuable and you're not sure how to protect it properly, just ask before you ship it. A quick question before collection is a lot better than a damaged item on the other end — and we'd always rather help you pack it right than deal with a claim afterwards.`,
+  },
+  {
+    slug: 'pakistan-customs-rules-prohibited-items',
+    title: "What You Can and Can't Send to Pakistan: Customs Rules Every Sender Should Know",
+    date: '2026-11-19',
+    category: 'Customs',
+    excerpt: 'A quick, practical guide to what Pakistan customs allows, restricts, and prohibits — so your shipment clears smoothly instead of getting held up or sent back.',
+    image: '/blog/customs-rules.svg',
+    content: `Customs delays are one of the most frustrating things that can happen to an otherwise straightforward shipment — and they're almost always avoidable if you know what to expect before you pack the box. This isn't a complete legal reference (customs rules can and do change, and the final call always sits with Pakistan Customs on the day), but it covers the practical basics that catch most first-time senders out.
+
+**Generally fine: personal effects and household goods**
+
+Clothing, used personal items, household goods, and gifts for family are the bread and butter of UK-to-Pakistan cargo, and generally move through customs without issue when properly declared. The key word there is "declared" — accurate, honest descriptions of what's in each box make a real difference to how smoothly customs processing goes.
+
+**Items that need extra care**
+
+Electronics are allowed but can attract additional scrutiny and, depending on type and quantity, potential duty — a single phone or laptop for personal use is a very different situation to multiple units, which can start to look commercial in nature. Similarly, large quantities of any single item (clothing, shoes, anything) can raise questions about whether a shipment is genuinely personal use or undeclared commercial goods. If what you're sending looks like it might fall into a grey area, it's always worth asking before you ship rather than finding out at the customs desk.
+
+**Generally restricted or requiring special handling**
+
+Certain foodstuffs, some medications (particularly in bulk or without proper documentation), and specific categories of goods can be restricted or require additional paperwork. If you're sending medicine for a family member, it's worth checking in advance rather than assuming it will pass through without question.
+
+**Prohibited items**
+
+Like most countries, Pakistan prohibits certain categories outright — weapons and ammunition, narcotics, certain publications, counterfeit goods, and similar categories you'd expect to be restricted internationally. These aren't grey areas, and no reputable cargo company will knowingly ship them.
+
+**Why accurate descriptions matter so much**
+
+The single biggest thing you can do to avoid a customs headache is describe your shipment's contents accurately and specifically. "Personal items" or "household goods" as the only description on a box full of mixed contents is far more likely to trigger a manual inspection than a clear itemised list. It takes an extra minute when you're packing, and it genuinely speeds up the process on the other end.
+
+**Duties and taxes**
+
+Depending on what's being sent and its value, Pakistan customs may apply duty. This isn't something a UK cargo company controls or can waive — it's set by Pakistan Customs based on their own rules at the time of import. If you're shipping anything of significant value, it's worth being aware that duty may apply, so it isn't a surprise to the recipient.
+
+**The simple rule of thumb**
+
+If you wouldn't be comfortable explaining exactly what's in a box to a customs officer, it's worth reconsidering whether it should be in there. For everything else — the ordinary business of sending clothes, gifts, and household items to family — accurate labelling and honest declarations are really all it takes to keep things moving smoothly. If you're ever unsure whether something specific is fine to send, just ask us before you pack it — it's a much easier conversation to have in advance than after your shipment has already left the UK.`,
+  },
+  {
+    slug: 'excess-baggage-vs-cargo-pakistan',
+    title: 'Excess Baggage or Cargo? The Cheapest Way to Send Personal Items to Pakistan',
+    date: '2026-11-19',
+    category: 'Excess Baggage',
+    excerpt: 'Sending a few suitcases of clothes and personal items to family in Pakistan? Here is how excess baggage shipping compares to standard cargo, and which one actually saves you money.',
+    image: '/blog/excess-baggage-vs-cargo.svg',
+    content: `If you're a family that travels regularly between the UK and Pakistan, you've probably faced this exact situation: too much to pack into your airline baggage allowance, and a choice to make about how to send the rest. This is one of the most common questions we get, so here's a straightforward comparison.
+
+**What excess baggage shipping actually is**
+
+Excess baggage is exactly what it sounds like — a service built specifically for suitcases and personal luggage, rather than commercial-style cargo boxes. A typical excess baggage consignment is a couple of large suitcases, sent ahead of (or instead of) checking them in with an airline. It's popular specifically because it's built around how families actually pack when visiting relatives — clothes, gifts, and personal items in ordinary suitcases, not repacked into cardboard boxes.
+
+**Why it's often cheaper than paying airline excess fees**
+
+Airlines charge excess baggage fees per kilo over your allowance, and those fees add up fast — it's not unusual for a couple of extra suitcases to cost more at the airport check-in desk than shipping them separately would have cost in the first place. If you know in advance that you'll be over your allowance, it's almost always worth comparing the cost of an excess baggage shipping service against what the airline would charge, rather than assuming checking in extra bags is the default cheapest option.
+
+**When standard cargo makes more sense**
+
+If what you're sending isn't suitcases at all — boxes of household goods, furniture, kitchen items, anything that isn't naturally "luggage" — standard air or sea cargo is the better fit. Cargo pricing and handling is built around boxes and palletised goods, not soft suitcases, so trying to force a houseful of goods into suitcases just to use an excess baggage service usually isn't the economical choice it might seem.
+
+**The practical difference in how it travels**
+
+Excess baggage shipments are typically handled as, well, baggage — sent via commercial routes designed for that kind of consignment, often with a faster, more predictable transit time than bulk cargo. Standard cargo, especially sea freight, is built for larger volumes and accepts a longer transit time in exchange for a lower cost per kilo on bigger shipments.
+
+**A simple way to decide**
+
+Picture what you're actually sending. If you could physically zip it into a suitcase, excess baggage is very likely your cheapest and most convenient option. If it's boxes, furniture, or anything that was never going to fit in a suitcase in the first place, standard cargo — air or sea, depending on urgency — is the right tool for the job.
+
+**Door-to-door, either way**
+
+Whichever option fits what you're sending, door-to-door delivery is available, so your suitcases or boxes get collected from your home in the UK and delivered straight to your family's door in Pakistan — no need to find a courier, visit a depot, or arrange local transport on the other end yourself.
+
+If you're not sure which category your shipment falls into, just describe what you're sending — number of bags or boxes, rough weight, and when you need it there — and we'll tell you honestly which service will actually save you money, rather than defaulting you to whichever is easiest for us.`,
+  },
+]
 
 // Tracking statuses — matches the stage names used across the CRM/ops
 // tooling (Collected / Dispatched / Arrived / Delivered), not the old

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C1535"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg5)"/>
+  <g opacity="0.25">
+    <circle cx="80" cy="60" r="1.4" fill="#fff"/>
+    <circle cx="720" cy="80" r="1.4" fill="#fff"/>
+    <circle cx="60" cy="400" r="1.4" fill="#fff"/>
+  </g>
+
+  <!-- Suitcases -->
+  <g transform="translate(210,260)">
+    <rect x="-70" y="-50" width="140" height="100" rx="12" fill="#f97316"/>
+    <rect x="-70" y="-50" width="140" height="100" rx="12" fill="none" stroke="#0a1628" stroke-width="3" opacity="0.15"/>
+    <rect x="-24" y="-66" width="48" height="20" rx="6" fill="#f97316"/>
+    <line x1="-70" y1="-10" x2="70" y2="-10" stroke="#0a1628" stroke-width="3" opacity="0.2"/>
+    <line x1="-70" y1="20" x2="70" y2="20" stroke="#0a1628" stroke-width="3" opacity="0.2"/>
+  </g>
+  <g transform="translate(130,300)">
+    <rect x="-46" y="-40" width="92" height="80" rx="10" fill="#fb923c"/>
+    <rect x="-18" y="-54" width="36" height="16" rx="5" fill="#fb923c"/>
+  </g>
+  <text x="170" y="60" text-anchor="middle" fill="#fff" font-size="22" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">EXCESS BAGGAGE</text>
+  <text x="170" y="84" text-anchor="middle" fill="#fdba74" font-size="12" font-weight="700" font-family="Arial, sans-serif">For personal items &amp; suitcases</text>
+
+  <circle cx="400" cy="225" r="26" fill="#0a1628" stroke="#fb923c" stroke-width="2.5"/>
+  <text x="400" y="233" text-anchor="middle" fill="#fb923c" font-size="18" font-weight="800" font-family="Arial, sans-serif">OR</text>
+
+  <!-- Cargo box with straps -->
+  <g transform="translate(600,260)">
+    <rect x="-80" y="-55" width="160" height="110" rx="6" fill="#c8942a"/>
+    <rect x="-80" y="-55" width="160" height="110" rx="6" fill="none" stroke="#8c6116" stroke-width="3"/>
+    <rect x="-80" y="-4" width="160" height="12" fill="#3b2a0c" opacity="0.5"/>
+    <rect x="-10" y="-55" width="20" height="110" fill="#3b2a0c" opacity="0.5"/>
+  </g>
+  <text x="600" y="60" text-anchor="middle" fill="#fff" font-size="22" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">CARGO SHIPMENT</text>
+  <text x="600" y="84" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="700" font-family="Arial, sans-serif">For boxes &amp; larger loads</text>
+</svg>

@@ -12,7 +12,7 @@ export default function Blog() {
       <NextSeo
         title="Cargo Tips & Guides Blog"
         description="Helpful guides on shipping cargo to Pakistan from the UK. Tips on air cargo, sea freight, excess baggage, customs, and saving money on UK to Pakistan delivery."
-        canonical="https://cargolord.co.uk/blog/"
+        canonical="https://cargolord.com/blog/"
       />
       <Navbar />
       <PageHeader

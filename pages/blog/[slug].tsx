@@ -25,7 +25,7 @@ export default function BlogPost({ post }: { post: typeof blogPosts[0] }) {
       <NextSeo
         title={post.title}
         description={post.excerpt}
-        canonical={`https://cargolord.co.uk/blog/${post.slug}/`}
+        canonical={`https://cargolord.com/blog/${post.slug}/`}
         openGraph={{ images: [{ url: post.image }] }}
       />
       <Navbar />
@@ -56,7 +56,7 @@ export default function BlogPost({ post }: { post: typeof blogPosts[0] }) {
             <div className="mt-10 bg-navy-800 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <p className="text-white font-heading font-bold text-lg">Ready to ship?</p>
-                <p className="text-gray-400 text-sm">Get a free quote — door-to-door from £1.50/kg to Pakistan.</p>
+                <p className="text-gray-400 text-sm">Get a free, no-obligation quote for door-to-door delivery to Pakistan.</p>
               </div>
               <Link href="/quote" className="btn-primary flex-shrink-0">Get a Quote</Link>
             </div>
