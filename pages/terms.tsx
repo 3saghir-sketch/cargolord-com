@@ -57,7 +57,7 @@ export default function Terms() {
       <NextSeo
         title="Terms & Conditions"
         description="Cargo Lord Ltd terms and conditions covering shipment acceptance, insurance, liability, customs clearance, claims procedures, and prohibited items."
-        canonical="https://cargolord.co.uk/terms/"
+        canonical="https://cargolord.com/terms/"
       />
       <Navbar />
       <PageHeader

@@ -37,7 +37,7 @@ export default function Contact() {
       <NextSeo
         title="Contact Us"
         description="Contact Cargo Lord Ltd. Birmingham: 0121 328 3232 | Manchester: 0161 820 5029 | London: 020 3627 3315. Email: info@cargolord.com."
-        canonical="https://cargolord.co.uk/contact/"
+        canonical="https://cargolord.com/contact/"
       />
       <Navbar />
       <PageHeader

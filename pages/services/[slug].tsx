@@ -17,7 +17,7 @@ export default function ServiceDetail({ service }: { service: typeof services[0]
       <NextSeo
         title={`${service.title} — ${service.subtitle}`}
         description={service.shortDesc}
-        canonical={`https://cargolord.co.uk/services/${service.slug}/`}
+        canonical={`https://cargolord.com/services/${service.slug}/`}
       />
       <Navbar />
       <PageHeader

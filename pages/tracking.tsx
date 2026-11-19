@@ -15,7 +15,7 @@ export default function TrackingPage() {
       <NextSeo
         title="Track Your Shipment"
         description="Track your Cargo Lord shipment in real time. Enter your tracking number to see the latest status and full update history."
-        canonical="https://cargolord.co.uk/tracking/"
+        canonical="https://cargolord.com/tracking/"
       />
       <Navbar />
       <PageHeader

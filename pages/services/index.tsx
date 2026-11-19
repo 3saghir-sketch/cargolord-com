@@ -12,7 +12,7 @@ export default function Services() {
       <NextSeo
         title="Our Services — UK to Pakistan Cargo"
         description="Cargo Lord offers door-to-door cargo, sea freight, air cargo, port-to-port shipping, excess baggage, and cargo from Pakistan. Competitive UK rates since 2012."
-        canonical="https://cargolord.co.uk/services/"
+        canonical="https://cargolord.com/services/"
       />
       <Navbar />
       <PageHeader
