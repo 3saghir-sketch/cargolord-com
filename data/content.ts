@@ -423,6 +423,27 @@ You can keep your shipping costs down on both air and sea cargo by packing smart
 
 If you're unsure how to pack an awkward item, or you don't have suitable boxes on hand, get in touch with our team before shipping. We advise customers every day on the most economical way to pack and ship personal effects and commercial goods from the UK to Pakistan, India, Saudi Arabia, and worldwide — just tell us what you're sending and we'll help you get the most cost-effective shipment possible.`,
   },
+  {
+    slug: 'sea-cargo-to-pakistan-shipping-times',
+    title: 'Why Sea Cargo to Pakistan Takes 12 to 13 Weeks: The Truth About Shipping Times',
+    date: '2026-11-19',
+    category: 'Shipping Times',
+    excerpt: "Wondering why sea cargo to Pakistan isn't quicker? Here's what actually happens between collection and delivery, and why we quote 12 to 13 weeks door-to-door.",
+    image: '/blog/sea-cargo-timeline.svg',
+    content: `We get asked all the time why sending boxes or furniture by sea takes a bit longer these days. It really comes down to a mix of global route changes — like the disruptions around the Suez Canal — and the careful packing process we handle at our end.
+
+**Why Your Shipment Isn't on the Water Immediately**
+
+When we collect your cargo, it doesn't just hop straight onto a ship. First, it comes into our secure warehouse, where our team carefully stacks, measures, and prepares everything for export. We also have to navigate "roll-overs" with shipping lines, which happen when a vessel runs out of space and your container gets pushed to the next available sailing — something that's outside any cargo company's direct control, but worth knowing about so a delay doesn't come as a surprise.
+
+**What to Expect with Our 12 to 13 Week Timeline**
+
+Because of these real-world factors, we give a realistic door-to-door timeframe of 12 to 13 weeks for sea freight to Pakistan. While customs checks in cities like Karachi can sometimes add a little time on top, we're proud to hit our estimated delivery dates around 99% of the time — so when we give you a window, it's one you can actually plan around.
+
+**Let Us Handle the Hard Work**
+
+Shipping doesn't have to be stressful. At Cargo Lord Ltd, we take care of everything from your doorstep here in the UK all the way to your family's hands in Pakistan. We even offer free collection across the country to make it as easy as possible — all you need to do is tell us what you're sending and when.`,
+  },
 ]
 
 // Tracking statuses — matches the stage names used across the CRM/ops
