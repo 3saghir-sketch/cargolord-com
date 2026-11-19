@@ -350,6 +350,43 @@ Whichever option fits what you're sending, door-to-door delivery is available, s
 
 If you're not sure which category your shipment falls into, just describe what you're sending — number of bags or boxes, rough weight, and when you need it there — and we'll tell you honestly which service will actually save you money, rather than defaulting you to whichever is easiest for us.`,
   },
+  {
+    slug: 'saudi-arabia-uk-cargo-shipping',
+    title: 'Shipping Between Saudi Arabia and the UK: A Simple Guide to Personal Effects & Excess Baggage',
+    date: '2026-11-19',
+    category: 'Saudi Arabia Route',
+    excerpt: "Moving between Saudi Arabia and the UK, or sending belongings one way for family? Here is how personal effects and excess baggage shipping works on this route, in plain terms.",
+    image: '/blog/saudi-uk-route.svg',
+    content: `A good share of the people who ship with us on this route aren't sending gifts — they're relocating, finishing a contract, or sending belongings ahead of a move between Saudi Arabia and the UK. It's a slightly different situation to a one-off parcel, so here's how it actually works.
+
+**Who this route is usually for**
+
+Workers and families moving between the two countries, people wrapping up time in Saudi Arabia and heading home to the UK, and the reverse — relocating out to Saudi Arabia for work. In both directions, the typical shipment is personal effects: clothing, household items, and the accumulated belongings of however long someone's been living there, rather than commercial cargo.
+
+**How collection works**
+
+You get in touch with the collection address and a contact number, and we arrange collection from a hotel or home address in Saudi Arabia (or in the UK, for the reverse direction) — you don't need to find your own way to a port or depot. The same applies on the receiving end: delivery can go straight to the destination address, or, if it suits you better, you can collect from the airport yourself.
+
+**Door-to-door or airport collection — your choice**
+
+Both options are available on this route. Door-to-door is the more convenient choice if you'd rather not deal with collection logistics on arrival. Airport collection can work out more cost-effective if someone on the receiving end is able to collect it themselves and doesn't mind the extra step.
+
+**Customs and VAT — what to expect**
+
+As with any international shipment, duty or VAT can apply at the destination depending on what's being sent and its value — this isn't something a shipping company sets or controls, it's determined by customs at the port of entry. If a cost like this comes up, we'll tell you about it rather than let it be a surprise on delivery. The honest answer is that for most personal effects shipments this is straightforward, but it's worth knowing it's a possibility going in, rather than assuming there will never be anything to pay.
+
+**Packing for a longer-distance personal effects move**
+
+Because this is often a larger consignment than a typical parcel — the accumulated belongings of months or years abroad, not just a couple of boxes — the same packing principles apply, just at a bigger scale. Sturdy boxes, padding for anything breakable, and accurate labelling matter just as much (arguably more) when you're shipping the contents of an entire room or household rather than a single gift box. If you haven't already, our general packing guide covers the fundamentals.
+
+**A two-way service**
+
+This route runs both ways — Saudi Arabia to UK, and UK to Saudi Arabia — so whichever direction you're moving, the same collection, customs, and delivery process applies, just mirrored.
+
+**Getting a quote**
+
+Because every personal effects shipment on this route is a little different — number of boxes or suitcases, total weight, collection location, and which direction you're going — the best way to get an accurate cost is to just tell us what you're moving and where from and to. We'll give you a straight answer on the best option for your specific move, not a generic rate that doesn't reflect what you're actually sending.`,
+  },
 ]
 
 // Tracking statuses — matches the stage names used across the CRM/ops

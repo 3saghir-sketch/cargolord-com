@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0C1535"/>
+    </linearGradient>
+    <linearGradient id="route6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#006c35" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#fb923c" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg6)"/>
+  <g opacity="0.3">
+    <circle cx="50" cy="50" r="1.4" fill="#fff"/>
+    <circle cx="730" cy="70" r="1.4" fill="#fff"/>
+    <circle cx="90" cy="400" r="1.4" fill="#fff"/>
+    <circle cx="710" cy="390" r="1.4" fill="#fff"/>
+  </g>
+
+  <!-- route: Saudi (right) to UK (left), two-way arrows -->
+  <path d="M 630 300 C 460 150, 330 340, 160 180" fill="none" stroke="url(#route6)" stroke-width="4" stroke-dasharray="10 12" stroke-linecap="round"/>
+
+  <!-- UK marker -->
+  <g transform="translate(160,180)">
+    <circle r="14" fill="#f97316" opacity="0.3"/>
+    <circle r="7" fill="#f97316"/>
+    <circle r="7" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
+    <text x="0" y="-28" text-anchor="middle" fill="#fff" font-size="20" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1.5">UK</text>
+  </g>
+
+  <!-- Saudi marker -->
+  <g transform="translate(630,300)">
+    <circle r="16" fill="#006c35" opacity="0.4"/>
+    <circle r="8" fill="#15a862"/>
+    <circle r="8" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+    <text x="0" y="36" text-anchor="middle" fill="#15a862" font-size="20" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">SAUDI ARABIA</text>
+  </g>
+
+  <!-- two planes, opposite directions -->
+  <g transform="translate(330,245) rotate(142)">
+    <path d="M0 0 L34 6 L46 0 L34 -6 Z M20 -2 L28 -22 L34 -22 L30 -2 Z M20 2 L28 22 L34 22 L30 2 Z" fill="#fb923c"/>
+  </g>
+  <g transform="translate(460,215) rotate(-38)">
+    <path d="M0 0 L34 6 L46 0 L34 -6 Z M20 -2 L28 -22 L34 -22 L30 -2 Z M20 2 L28 22 L34 22 L30 2 Z" fill="#15a862"/>
+  </g>
+
+  <!-- suitcase: personal effects -->
+  <g transform="translate(400,110)">
+    <rect x="-38" y="-26" width="76" height="54" rx="8" fill="#ffffff" opacity="0.95"/>
+    <rect x="-14" y="-40" width="28" height="16" rx="4" fill="#ffffff" opacity="0.95"/>
+    <line x1="-38" y1="0" x2="38" y2="0" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="-6" y="-10" width="12" height="20" rx="2" fill="#f97316"/>
+  </g>
+  <text x="400" y="55" text-anchor="middle" fill="#cbd5e1" font-size="13" font-weight="700" font-family="Arial, sans-serif" letter-spacing="2">PERSONAL EFFECTS</text>
+</svg>
