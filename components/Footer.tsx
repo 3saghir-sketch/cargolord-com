@@ -26,10 +26,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <span className="text-white font-heading font-extrabold text-2xl tracking-tight">
-                CARGO<span className="text-orange-500">LORD</span>
-              </span>
-              <span className="block text-orange-400 text-xs tracking-widest uppercase mt-0.5">Ltd — Est. 2012</span>
+              <img src="/cargo-lord-logo.png" alt="Cargo Lord" className="h-14 w-auto" />
             </div>
             <p className="text-sm leading-relaxed mb-5">
               From Birmingham to the World. Trusted cargo and freight services since 2012, specialising in UK to Pakistan door-to-door delivery.

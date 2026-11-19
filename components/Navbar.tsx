@@ -52,15 +52,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3">
-              <div className="relative">
-                <span className="text-white font-heading font-extrabold text-2xl md:text-3xl tracking-tight leading-none">
-                  CARGO<span className="text-orange-500">LORD</span>
-                </span>
-                <span className="block text-orange-400 text-xs font-body tracking-widest uppercase leading-none mt-0.5">
-                  Ltd — Est. 2012
-                </span>
-              </div>
+            <Link href="/" className="flex items-center">
+              <img src="/cargo-lord-logo.png" alt="Cargo Lord" className="h-12 md:h-16 w-auto" />
             </Link>
 
             {/* Desktop nav */}
