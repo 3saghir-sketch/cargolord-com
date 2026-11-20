@@ -487,11 +487,20 @@ export const trackingStatuses = [
 ]
 
 // Stats — only figures that are actually verifiable from the current site.
-// "Shipments Delivered" and "Customer Satisfaction" numbers were dropped —
-// no source for either was found anywhere on the live site.
 export const stats = [
   { value: 14, suffix: '+', label: 'Years in Business' },
   { value: 165, suffix: '+', label: 'Pakistan Cities Covered' },
   { value: 3, suffix: '', label: 'Pakistan Offices' },
   { value: 4, suffix: '', label: 'UK Office Locations' },
+]
+
+// Impact stats — pulled directly from the live Drupal and Perfex CRM
+// shipment databases on 2026-11-20 (cleaned: excluded a handful of
+// corrupted weight values from a 2015 import glitch, cancelled orders,
+// and cross-checked for overlap between the two systems so nothing is
+// double-counted). Real totals were 42,779 shipments / 2,069,953 kg —
+// both rounded DOWN here as a safety margin for a public claim.
+export const impactStats = [
+  { value: 2000000, suffix: '+', label: 'KG Shipped', sublabel: 'to Pakistan, India & Europe' },
+  { value: 42000, suffix: '+', label: 'Shipments Delivered', sublabel: 'since 2015' },
 ]

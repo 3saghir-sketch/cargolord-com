@@ -1,6 +1,7 @@
 import { NextSeo } from 'next-seo'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
+import ImpactBanner from '../components/ImpactBanner'
 import ServicesGrid from '../components/ServicesGrid'
 import AboutSection from '../components/AboutSection'
 import StatsSection from '../components/StatsSection'
@@ -25,6 +26,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <ImpactBanner />
         <ServicesGrid />
         <AboutSection />
         <StatsSection />
