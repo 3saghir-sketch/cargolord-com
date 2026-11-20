@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0C1535"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg9)"/>
+  <g opacity="0.25">
+    <circle cx="60" cy="50" r="1.4" fill="#fff"/>
+    <circle cx="740" cy="60" r="1.4" fill="#fff"/>
+    <circle cx="50" cy="400" r="1.4" fill="#fff"/>
+    <circle cx="730" cy="410" r="1.4" fill="#fff"/>
+  </g>
+
+  <text x="400" y="52" text-anchor="middle" fill="#fff" font-size="23" font-weight="800" font-family="Arial, sans-serif" letter-spacing="0.5">WHY SHIPPING COSTS HAVE RISEN</text>
+
+  <!-- rising trend line behind everything -->
+  <path d="M 70 360 L 230 320 L 390 260 L 550 200 L 710 140" fill="none" stroke="#f97316" stroke-width="3" stroke-dasharray="8 8" opacity="0.5"/>
+  <circle cx="710" cy="140" r="6" fill="#fb923c"/>
+
+  <!-- Fuel -->
+  <g transform="translate(160,230)">
+    <circle r="46" fill="#0f2a4a" stroke="#fb923c" stroke-width="2"/>
+    <g transform="translate(-14,-16)">
+      <rect x="0" y="0" width="22" height="30" rx="3" fill="#fb923c"/>
+      <rect x="4" y="5" width="14" height="8" fill="#0f2a4a"/>
+      <path d="M22,10 L30,10 L30,26 Q30,30 26,30 L22,30" fill="none" stroke="#fb923c" stroke-width="2.5"/>
+    </g>
+    <text x="0" y="62" text-anchor="middle" fill="#fdba74" font-size="13" font-weight="700" font-family="Arial, sans-serif">FUEL COSTS</text>
+  </g>
+
+  <!-- Shipping / port fees -->
+  <g transform="translate(400,230)">
+    <circle r="46" fill="#0f2a4a" stroke="#60a5fa" stroke-width="2"/>
+    <g transform="translate(0,-10)">
+      <path d="M-22,10 L-10,-2 L22,-2 L28,10 L28,16 L-22,16 Z" fill="#60a5fa"/>
+      <rect x="-4" y="-16" width="9" height="14" fill="#93c5fd"/>
+    </g>
+    <text x="0" y="62" text-anchor="middle" fill="#93c5fd" font-size="13" font-weight="700" font-family="Arial, sans-serif">SHIPPING &amp; PORT FEES</text>
+  </g>
+
+  <!-- Exchange rate -->
+  <g transform="translate(640,230)">
+    <circle r="46" fill="#0f2a4a" stroke="#15a862" stroke-width="2"/>
+    <text x="-14" y="8" text-anchor="middle" fill="#6ee7b7" font-size="22" font-weight="800" font-family="Arial, sans-serif">&#163;</text>
+    <path d="M-2,-2 L10,-2 M6,-6 L10,-2 L6,2" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2,8 L14,8 M10,4 L14,8 L10,12" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="scale(-1,1) translate(0,0)"/>
+    <text x="16" y="8" text-anchor="middle" fill="#6ee7b7" font-size="18" font-weight="800" font-family="Arial, sans-serif">&#8360;</text>
+    <text x="0" y="62" text-anchor="middle" fill="#6ee7b7" font-size="13" font-weight="700" font-family="Arial, sans-serif">EXCHANGE RATE</text>
+  </g>
+
+  <!-- price tag -->
+  <g transform="translate(400,330)">
+    <rect x="-90" y="-22" width="180" height="44" rx="8" fill="#f97316"/>
+    <text x="0" y="8" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="800" font-family="Arial, sans-serif">&#163;1.50 / KG</text>
+  </g>
+</svg>

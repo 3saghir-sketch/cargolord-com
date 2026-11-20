@@ -444,6 +444,31 @@ Because of these real-world factors, we give a realistic door-to-door timeframe 
 
 Shipping doesn't have to be stressful. At Cargo Lord Ltd, we take care of everything from your doorstep here in the UK all the way to your family's hands in Pakistan. We even offer free collection across the country to make it as easy as possible — all you need to do is tell us what you're sending and when.`,
   },
+  {
+    slug: 'why-cargo-shipping-costs-to-pakistan-have-risen',
+    title: 'Why Has Cargo to Pakistan Gotten More Expensive? The Real Reasons Behind Rising Shipping Costs',
+    date: '2026-11-19',
+    category: 'Cost Guide',
+    excerpt: "If you've shipped with us before, you've probably noticed the price has gone up — here's an honest breakdown of what's actually driving the increase, and why our rate is £1.50/kg.",
+    image: '/blog/shipping-cost-rises.svg',
+    content: `If you've shipped with us before, you may have noticed our rates have gone up. A few years ago, sending cargo to Pakistan could cost just a few pence a kilo — now it's closer to £1.50 a kilo. That's a noticeable jump, and we think you deserve a straight explanation rather than just a bigger invoice. Here's what's actually driving it.
+
+**It Starts with Fuel Costs**
+
+The biggest reason is the price of fuel. It's not just more expensive to run the trucks that pick up your boxes from your house — the cost goes up for the whole journey. From the moment we collect your shipment to when it gets delivered, fuel is costing much more than it used to, and that cost runs through every stage of transport.
+
+**Bigger Bills for Shipping and Port Fees**
+
+On top of fuel, the companies that own the big ships and planes have put their prices up too. There are also extra charges for using ports, and the rules and fees for getting things through customs in Pakistan have gone up. None of these increases are huge on their own, but they all add up to a bigger total by the time your shipment reaches its destination.
+
+**The British Pound and Exchange Rates**
+
+The value of the British Pound against the Pakistani Rupee matters too. Even when the pound is holding up reasonably well, a shift in the exchange rate can make shipping more expensive on the Pakistan side of the journey — and it's simply not something we're able to control.
+
+**We're Still Keeping It Fair**
+
+We know nobody likes paying more. We keep our price at £1.50 a kilo to make sure you get a reliable service without cutting corners — proper handling, realistic timelines, and a team that takes care of your shipment the whole way, rather than finding savings by cutting the things that actually matter.`,
+  },
 ]
 
 // Tracking statuses — matches the stage names used across the CRM/ops
