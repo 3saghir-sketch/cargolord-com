@@ -21,15 +21,45 @@ const WA_ISSUES: [string, string][] = [
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
   const [trackingNo, setTrackingNo] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSent(true)
+    setSending(true)
+    setError(false)
+
+    const description = [
+      `Contact Form Message`,
+      form.subject ? `Subject: ${form.subject}` : '',
+      `Message: ${form.message}`,
+    ].filter(Boolean).join('\n')
+
+    try {
+      const res = await fetch('/api/submit-lead/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSent(true)
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          ;(window as any).gtag('event', 'generate_lead', { form: 'contact' })
+        }
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -136,7 +166,14 @@ export default function Contact() {
                     <label className="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">Message *</label>
                     <textarea name="message" required rows={5} value={form.message} onChange={handleChange} className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-orange-500 resize-none" placeholder="Your message..." />
                   </div>
-                  <button type="submit" className="btn-primary w-full py-4">Send Message</button>
+                  {error && (
+                    <p className="text-sm text-red-600 bg-red-50 border border-red-200 px-4 py-3">
+                      Something went wrong sending your message — please call us instead, or try again.
+                    </p>
+                  )}
+                  <button type="submit" disabled={sending} className="btn-primary w-full py-4 disabled:opacity-60">
+                    {sending ? 'Sending...' : 'Send Message'}
+                  </button>
                 </form>
               )}
             </div>

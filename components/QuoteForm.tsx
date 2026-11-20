@@ -5,15 +5,47 @@ export default function QuoteForm() {
     name: '', email: '', phone: '', from: '', to: '', service: '', weight: '', message: '',
   })
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: wire up email backend (e.g. Formspree, EmailJS, or Next.js API route)
-    setSent(true)
+    setSending(true)
+    setError(false)
+
+    const description = [
+      `Quote Request`,
+      form.from ? `From: ${form.from}` : '',
+      form.to ? `To: ${form.to}` : '',
+      form.service ? `Service: ${form.service}` : '',
+      form.weight ? `Approx. Weight: ${form.weight}kg` : '',
+      form.message ? `Message: ${form.message}` : '',
+    ].filter(Boolean).join('\n')
+
+    try {
+      const res = await fetch('/api/submit-lead/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSent(true)
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          ;(window as any).gtag('event', 'generate_lead', { form: 'quote' })
+        }
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -115,8 +147,14 @@ export default function QuoteForm() {
                   <textarea name="message" rows={3} value={form.message} onChange={handleChange} className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-orange-500 transition-colors resize-none" placeholder="Brief description of goods..." />
                 </div>
 
-                <button type="submit" className="btn-primary w-full text-center py-4">
-                  Send Quote Request
+                {error && (
+                  <p className="text-sm text-red-600 bg-red-50 border border-red-200 px-4 py-3">
+                    Something went wrong sending your request — please call or WhatsApp us instead, or try again.
+                  </p>
+                )}
+
+                <button type="submit" disabled={sending} className="btn-primary w-full text-center py-4 disabled:opacity-60">
+                  {sending ? 'Sending...' : 'Send Quote Request'}
                 </button>
 
                 <p className="text-xs text-gray-400 text-center">
