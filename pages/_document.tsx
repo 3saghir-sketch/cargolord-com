@@ -4,14 +4,19 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Google tag (GTM-N6937QBX) -- site-wide analytics */}
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N6937QBX"></script>
+        {/* Google Analytics (G-4FQ8YST8ZP) -- dedicated GA4 property for
+            cargolord.com, separate from cargolord.co.uk's property. This
+            replaced a shared GTM container (GTM-N6937QBX) inherited from
+            the co.uk reference build, which was mixing both domains'
+            traffic into one property. */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4FQ8YST8ZP"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
+              gtag('config', 'G-4FQ8YST8ZP');
             `,
           }}
         />
