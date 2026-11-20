@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <DefaultSeo
         titleTemplate="%s | Cargo Lord Ltd"
         defaultTitle="Cargo Lord Ltd — Cargo to Pakistan, India & Europe from the UK"
-        description="Door-to-door air and sea cargo from the UK to Pakistan, India and Europe. Excess baggage and worldwide freight. Based in Birmingham. Est. 2012."
+        description="Door-to-door air and sea cargo from the UK to Pakistan, India and Europe, from just £1.50/kg. Excess baggage and worldwide freight. Based in Birmingham. Est. 2012."
         canonical="https://cargolord.com"
         openGraph={{
           type: 'website',

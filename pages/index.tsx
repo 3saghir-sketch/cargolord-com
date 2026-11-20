@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Cargo Lord Ltd — Cargo to Pakistan, India & Europe from the UK"
-        description="Door-to-door air and sea cargo to Pakistan, India and Europe. Excess baggage and worldwide freight. Offices in Birmingham, Manchester, London & Bolton. Est. 2012."
+        title="Cargo Lord Ltd — Cheap Cargo to Pakistan from the UK, from £1.50/kg"
+        description="Door-to-door air cargo to Pakistan from just £1.50/kg. No hidden customs charges. Sea cargo, excess baggage, air freight to Pakistan, India and Europe. Offices in Birmingham, Manchester, London & Bolton. Est. 2012."
         canonical="https://cargolord.com/"
         additionalMetaTags={[
           { name: 'keywords', content: 'cargo to pakistan, cheap cargo uk to pakistan, door to door cargo pakistan, air cargo pakistan, excess baggage pakistan, sea cargo pakistan, Birmingham cargo' },

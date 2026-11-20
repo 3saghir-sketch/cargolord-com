@@ -47,13 +47,13 @@ export default function AboutSection() {
             </p>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              We offer door-to-door cargo to Pakistan with no hidden customs charges at destination — get a quote and we'll give you an all-in price for your shipment.
+              We offer door-to-door cargo to Pakistan from just £1.50/kg, with no hidden customs charges at destination.
             </p>
 
             {/* Features list */}
             <ul className="space-y-3 mb-8">
               {[
-                'Door-to-door air and sea cargo to Pakistan',
+                'Door-to-door air and sea cargo from £1.50/kg',
                 'No hidden customs charges at destination',
                 'Offices in Birmingham, Manchester, London & Bolton',
                 'Air, sea, and excess baggage services',

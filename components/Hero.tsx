@@ -44,7 +44,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-300 text-base md:text-lg mb-8 font-body leading-relaxed max-w-xl">
-            Air and sea freight, collected anywhere in the UK and delivered door to door or port to port. Our flagship route runs to Pakistan every week, with our own customer offices in Islamabad, Karachi and Multan.
+            Air and sea freight, collected anywhere in the UK and delivered door to door or port to port, from just <span className="text-orange-400 font-semibold">£1.50/kg</span>. Our flagship route runs to Pakistan every week, with our own customer offices in Islamabad, Karachi and Multan.
           </p>
 
           {/* CTA buttons */}
@@ -108,7 +108,7 @@ export default function Hero() {
 
           {/* Trust badges */}
           <div className="flex flex-wrap gap-6 mt-8">
-            {[['✓', 'No Hidden Fees'], ['✓', 'Door-to-Door'], ['✓', 'Insured Shipments'], ['✓', 'Since 2012']].map(([icon, text]) => (
+            {[['✓', 'From £1.50/kg'], ['✓', 'No Hidden Fees'], ['✓', 'Door-to-Door'], ['✓', 'Insured Shipments'], ['✓', 'Since 2012']].map(([icon, text]) => (
               <div key={text} className="flex items-center gap-2 text-gray-300 text-sm">
                 <span className="text-orange-500 font-bold">{icon}</span>
                 <span>{text}</span>

@@ -80,9 +80,10 @@ export const services = [
     title: 'Air Cargo',
     subtitle: 'To Pakistan & Worldwide',
     icon: '✈️',
-    shortDesc: 'Faster transit than sea freight — personal effects, household goods and commercial cargo.',
-    description: `Air cargo is the fastest way to send personal effects, household goods and commercial cargo to Pakistan. Choose door-to-door for full convenience, or port-to-port if you're able to collect yourself. Collection is available UK-wide, and every shipment can be tracked online once it's on its way. Exact transit times depend on destination and current flight schedules — ask us for a current estimate when you book.`,
+    shortDesc: 'Faster transit than sea freight, from just £1.50/kg — personal effects, household goods and commercial cargo.',
+    description: `Air cargo is the fastest way to send personal effects, household goods and commercial cargo to Pakistan, from just £1.50/kg. Choose door-to-door for full convenience, or port-to-port if you're able to collect yourself. Collection is available UK-wide, and every shipment can be tracked online once it's on its way. Exact transit times depend on destination and current flight schedules — ask us for a current estimate when you book.`,
     features: [
+      'From just £1.50/kg',
       'Personal effects, household goods and commercial cargo',
       'Door-to-door or port-to-port options',
       'UK-wide collection',

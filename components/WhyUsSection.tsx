@@ -7,7 +7,7 @@ export default function WhyUsSection() {
   ]
 
   const reasons = [
-    { icon: '💰', title: 'Competitive Rates', desc: 'Get a free quote for your route and weight — no hidden fees or surprise charges.' },
+    { icon: '💰', title: 'Competitive Rates', desc: 'Door-to-door cargo from just £1.50/kg — no hidden fees or surprise charges.' },
     { icon: '🛡️', title: 'Careful Handling', desc: 'Your consignment is packed, documented and handled with care from collection to delivery.' },
     { icon: '📍', title: 'UK-Wide Coverage', desc: 'Offices in Birmingham, Manchester, London and Bolton. We collect anywhere in the UK.' },
     { icon: '📦', title: 'No Customs Surprises', desc: 'We handle all customs paperwork. Recipients in Pakistan pay nothing extra on arrival.' },
@@ -51,10 +51,10 @@ export default function WhyUsSection() {
             <div>
               <span className="section-tag">Why Choose Us</span>
               <h2 className="section-title mb-6">
-                The UK's Most Trusted Cargo Service to Pakistan
+                A Trusted Cargo Service to Pakistan
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                With over 12 years of experience and thousands of satisfied customers across the UK and Pakistan, Cargo Lord has built a reputation for reliability, transparency, and value. Here's what sets us apart:
+                With over 12 years of experience and thousands of customers across the UK and Pakistan, Cargo Lord has built a reputation for reliability, transparency, and value. Here's what sets us apart:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {reasons.map((r) => (
@@ -77,12 +77,12 @@ export default function WhyUsSection() {
                 alt="Cargo warehouse"
                 className="w-full h-[500px] object-cover"
               />
-              {/* Overlay quote */}
+              {/* Price callout */}
               <div className="absolute bottom-8 left-8 right-8 bg-orange-500 p-6">
-                <p className="text-white font-heading font-bold text-xl leading-tight mb-2">
-                  "We have never had any problems — always pleasant and professional."
+                <p className="text-white font-heading font-extrabold text-3xl leading-tight">
+                  From £1.50/kg
                 </p>
-                <p className="text-orange-100 text-sm">— Verified Customer Review</p>
+                <p className="text-orange-100 text-sm mt-1">Door-to-door air cargo to Pakistan</p>
               </div>
             </div>
           </div>

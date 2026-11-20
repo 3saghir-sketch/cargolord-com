@@ -10,7 +10,7 @@ export default function Quote() {
     <>
       <NextSeo
         title="Get a Free Cargo Quote"
-        description="Request a free, no-obligation cargo quote from Cargo Lord. Door-to-door cargo to Pakistan, India and Europe. Call 0121 328 3232 or fill in the form."
+        description="Request a free, no-obligation cargo quote from Cargo Lord. Door-to-door cargo to Pakistan from £1.50/kg, plus India and Europe. Call 0121 328 3232 or fill in the form."
         canonical="https://cargolord.com/quote/"
       />
       <Navbar />

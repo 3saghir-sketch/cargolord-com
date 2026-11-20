@@ -43,7 +43,7 @@ export default function About() {
                   Cargo Lord Ltd was founded in 2012 by Saghir Bukhari in Birmingham, UK. Saghir identified a clear gap in the market: the British Pakistani community needed access to affordable, transparent, and truly reliable cargo services — and the existing options were falling short.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Starting from a single office in Birmingham, Cargo Lord grew through word of mouth. Our commitment to competitive, transparent pricing — combined with genuine customer service — quickly built a loyal customer base across the UK.
+                  Starting from a single office in Birmingham, Cargo Lord grew through word of mouth. Our commitment to competitive pricing — door-to-door cargo to Pakistan from just £1.50/kg — combined with genuine customer service, quickly built a loyal customer base across the UK.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Today we operate from offices in Birmingham, Manchester, London, and Bolton in the UK, with trusted partner operations in Islamabad, Karachi, Lahore, and Multan in Pakistan. We handle thousands of shipments every year — from personal parcels and excess baggage to commercial freight and sea containers.
