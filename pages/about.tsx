@@ -1,9 +1,44 @@
+import { useEffect, useRef, useState } from 'react'
 import { NextSeo } from 'next-seo'
 import Navbar from '../components/Navbar'
 import PageHeader from '../components/PageHeader'
 import Footer from '../components/Footer'
 import ChatWidget from '../components/ChatWidget'
-import { company } from '../data/content'
+import { company, impactStats } from '../data/content'
+
+function ProofCounter({ value, suffix }: { value: number; suffix: string }) {
+  const [count, setCount] = useState(0)
+  const ref = useRef<HTMLDivElement>(null)
+  const started = useRef(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true
+          const duration = 1800
+          const step = Math.ceil(value / (duration / 16))
+          let current = 0
+          const timer = setInterval(() => {
+            current = Math.min(current + step, value)
+            setCount(current)
+            if (current >= value) clearInterval(timer)
+          }, 16)
+        }
+      },
+      { threshold: 0.3 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [value])
+
+  return (
+    <div ref={ref} className="font-heading font-extrabold text-5xl md:text-6xl text-navy-800 leading-none">
+      {count.toLocaleString()}
+      <span className="text-orange-500">{suffix}</span>
+    </div>
+  )
+}
 
 export default function About() {
   const offices = [
@@ -74,6 +109,26 @@ export default function About() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Verified by the Numbers */}
+        <section className="py-20 bg-gray-50 border-y border-gray-200">
+          <div className="max-w-5xl mx-auto px-4 text-center">
+            <span className="section-tag">Verified by the Numbers</span>
+            <h2 className="section-title mb-6">We Can Show Our Working</h2>
+            <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto mb-12">
+              These figures aren't marketing estimates — they're pulled directly from our own shipment records, across both our UK operations system and our Pakistan courier network, going back to 2015. A cargo company trusted with this much freight should be able to show its working, not just claim it.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-xl mx-auto">
+              {impactStats.map((stat) => (
+                <div key={stat.label}>
+                  <ProofCounter value={stat.value} suffix={stat.suffix} />
+                  <p className="text-navy-800 font-heading font-bold uppercase tracking-wider text-sm mt-2">{stat.label}</p>
+                  <p className="text-gray-500 text-xs mt-1">{stat.sublabel}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
