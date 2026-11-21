@@ -24,9 +24,41 @@ export default function Contact() {
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
   const [trackingNo, setTrackingNo] = useState('')
+  const [issuePin, setIssuePin] = useState('')
+  const [verifying, setVerifying] = useState(false)
+  const [verifyError, setVerifyError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
+  }
+
+  const handleIssueClick = async (code: string) => {
+    setVerifyError('')
+
+    if (!trackingNo.trim() || !issuePin.trim()) {
+      setVerifyError('Please enter both your tracking number and PIN — both are on your receipt or confirmation email.')
+      return
+    }
+
+    setVerifying(true)
+    try {
+      const res = await fetch('/api/verify-pin/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ trackingNumber: trackingNo.trim(), pin: issuePin.trim() }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        const msg = `Hi, I have an issue with my shipment ${trackingNo.trim()}: ${code}`
+        window.open(`https://wa.me/${WA_ISSUE_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer')
+      } else {
+        setVerifyError(data.message || "That tracking number and PIN don't match our records.")
+      }
+    } catch {
+      setVerifyError('Something went wrong — please try again or call us.')
+    } finally {
+      setVerifying(false)
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -79,29 +111,40 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-orange-50 border border-orange-200 p-6 mb-10 text-center">
             <h3 className="font-heading font-bold text-navy-800 text-lg mb-1">Have an issue with an existing shipment?</h3>
-            <p className="text-gray-500 text-sm mb-4">Tell us your tracking number and tap the issue below — it goes straight to our WhatsApp support line.</p>
-            <input
-              type="text"
-              value={trackingNo}
-              onChange={(e) => setTrackingNo(e.target.value)}
-              placeholder="Tracking number (optional)"
-              className="max-w-xs mx-auto block border border-gray-200 px-4 py-2 text-sm text-center mb-4 focus:outline-none focus:border-orange-500"
-            />
+            <p className="text-gray-500 text-sm mb-4">Enter your tracking number and PIN — both are on your receipt or confirmation email — then tap the issue below. We verify it's your shipment before it goes to our WhatsApp support line.</p>
+            <div className="flex flex-wrap gap-2 justify-center mb-4">
+              <input
+                type="text"
+                value={trackingNo}
+                onChange={(e) => setTrackingNo(e.target.value)}
+                placeholder="Tracking number"
+                className="w-full max-w-[220px] border border-gray-200 px-4 py-2 text-sm text-center focus:outline-none focus:border-orange-500"
+              />
+              <input
+                type="text"
+                value={issuePin}
+                onChange={(e) => setIssuePin(e.target.value)}
+                placeholder="PIN"
+                className="w-full max-w-[120px] border border-gray-200 px-4 py-2 text-sm text-center focus:outline-none focus:border-orange-500"
+              />
+            </div>
+            {verifyError && (
+              <p className="text-sm text-red-600 bg-red-50 border border-red-200 px-4 py-2 mb-4 max-w-md mx-auto">
+                {verifyError}
+              </p>
+            )}
             <div className="flex flex-wrap gap-2 justify-center">
-              {WA_ISSUES.map(([label, code]) => {
-                const msg = `Hi, I have an issue with my shipment${trackingNo ? ' ' + trackingNo : ''}: ${code}`
-                return (
-                  <a
-                    key={code}
-                    href={`https://wa.me/${WA_ISSUE_NUMBER}?text=${encodeURIComponent(msg)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white border border-orange-300 text-orange-700 text-xs font-semibold px-4 py-2 rounded-full hover:bg-orange-100"
-                  >
-                    {label}
-                  </a>
-                )
-              })}
+              {WA_ISSUES.map(([label, code]) => (
+                <button
+                  key={code}
+                  type="button"
+                  disabled={verifying}
+                  onClick={() => handleIssueClick(code)}
+                  className="bg-white border border-orange-300 text-orange-700 text-xs font-semibold px-4 py-2 rounded-full hover:bg-orange-100 disabled:opacity-60"
+                >
+                  {verifying ? 'Checking...' : label}
+                </button>
+              ))}
             </div>
           </div>
 
