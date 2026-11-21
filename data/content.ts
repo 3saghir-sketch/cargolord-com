@@ -470,6 +470,33 @@ The value of the British Pound against the Pakistani Rupee matters too. Even whe
 
 We know nobody likes paying more. We keep our price at £1.50 a kilo to make sure you get a reliable service without cutting corners — proper handling, realistic timelines, and a team that takes care of your shipment the whole way, rather than finding savings by cutting the things that actually matter.`,
   },
+  {
+    slug: 'beat-airport-excess-baggage-fees',
+    title: 'Beat Airport Fees: A Simple Guide to Sending Excess Baggage',
+    date: '2026-11-21',
+    category: 'Shipping Guide',
+    excerpt: "Packed too much for your flight? Before you pay the airline's steep excess baggage fee at the check-in desk, here's a simpler and cheaper way to get your extra bags where they need to go.",
+    image: '/blog/excess-baggage-fees.svg',
+    content: `We all know the feeling of packing for a trip, only to realise your bags are way too heavy. With airlines cutting down on weight limits, showing up at the airport with extra bags usually means paying a massive, unexpected fee.
+
+**Avoid the Airport Panic**
+
+The secret to beating these charges is planning ahead. If you suspect your luggage is over the limit, a great trick is to buy a cheap handheld scale online. Weigh your bags at home, and if you're over, don't panic.
+
+Instead of paying the airline's high prices, you can call a specialist cargo company like us. We can arrange to pick up your excess baggage directly from your home, give you a clear price upfront, and ship it to your destination for a fraction of the cost.
+
+**Understanding Customs Rules**
+
+While we handle the heavy lifting, it's important to remember that every country has its own customs laws. Whether you're sending gifts or personal belongings, you will need a clearing agent at the destination to manage the paperwork and any necessary taxes.
+
+At Cargo Lord Ltd, we have established networks in places like Pakistan, India, and the Middle East to make sure this process goes smoothly.
+
+**Don't Let Excess Baggage Ruin Your Trip**
+
+Flying home for a wedding or visiting family shouldn't result in a financial headache. With a little planning, you can bring everything you need without breaking the bank.
+
+Need help with your luggage? Get an instant quote or contact our Birmingham team today to book your collection.`,
+  },
 ]
 
 // Tracking statuses — matches the stage names used across the CRM/ops

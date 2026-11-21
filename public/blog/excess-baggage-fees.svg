@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bgfee" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C1535"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgfee)"/>
+  <g opacity="0.25">
+    <circle cx="70" cy="50" r="1.4" fill="#fff"/>
+    <circle cx="730" cy="70" r="1.4" fill="#fff"/>
+    <circle cx="60" cy="410" r="1.4" fill="#fff"/>
+    <circle cx="740" cy="400" r="1.4" fill="#fff"/>
+  </g>
+
+  <line x1="400" y1="40" x2="400" y2="410" stroke="#fff" stroke-width="2" stroke-dasharray="6,8" opacity="0.15"/>
+
+  <text x="200" y="48" text-anchor="middle" fill="#fca5a5" font-size="13" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">AT THE AIRPORT DESK</text>
+
+  <g transform="translate(200,235)">
+    <rect x="-90" y="60" width="180" height="16" rx="4" fill="#1e293b"/>
+    <rect x="-55" y="-70" width="110" height="130" rx="10" fill="#f97316"/>
+    <rect x="-20" y="-86" width="40" height="18" rx="6" fill="#f97316"/>
+    <line x1="-55" y1="-20" x2="55" y2="-20" stroke="#0a1628" stroke-width="3" opacity="0.2"/>
+    <line x1="-55" y1="10" x2="55" y2="10" stroke="#0a1628" stroke-width="3" opacity="0.2"/>
+    <rect x="-60" y="76" width="120" height="34" rx="6" fill="#111827" stroke="#ef4444" stroke-width="2"/>
+    <text x="0" y="99" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="800" font-family="Arial, sans-serif">32.4 KG</text>
+    <g transform="translate(95,-95) rotate(18)">
+      <path d="M0,0 L58,0 L70,16 L58,32 L0,32 Z" fill="#ef4444"/>
+      <circle cx="12" cy="16" r="4" fill="#0a1628"/>
+      <text x="38" y="21" text-anchor="middle" fill="#fff" font-size="15" font-weight="800" font-family="Arial, sans-serif">£65</text>
+    </g>
+  </g>
+
+  <circle cx="400" cy="225" r="27" fill="#0a1628" stroke="#fb923c" stroke-width="2.5"/>
+  <text x="400" y="233" text-anchor="middle" fill="#fb923c" font-size="16" font-weight="800" font-family="Arial, sans-serif">VS</text>
+
+  <text x="600" y="48" text-anchor="middle" fill="#86efac" font-size="13" font-weight="800" font-family="Arial, sans-serif" letter-spacing="1">COLLECTED FROM HOME</text>
+
+  <g transform="translate(600,235)">
+    <rect x="-70" y="40" width="140" height="70" rx="6" fill="#1e3a5f"/>
+    <path d="M-80,40 L0,-10 L80,40 Z" fill="#16539e"/>
+    <rect x="-18" y="70" width="36" height="40" fill="#0f2742"/>
+    <rect x="-55" y="-68" width="110" height="128" rx="10" fill="#fb923c"/>
+    <rect x="-20" y="-84" width="40" height="18" rx="6" fill="#fb923c"/>
+    <line x1="-55" y1="-18" x2="55" y2="-18" stroke="#0a1628" stroke-width="3" opacity="0.2"/>
+    <line x1="-55" y1="12" x2="55" y2="12" stroke="#0a1628" stroke-width="3" opacity="0.2"/>
+    <circle cx="48" cy="-75" r="17" fill="#22c55e"/>
+    <path d="M40,-75 L46,-68 L58,-83" stroke="#0a1628" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-60" y="130" width="120" height="34" rx="6" fill="#111827" stroke="#fb923c" stroke-width="2"/>
+    <text x="0" y="153" text-anchor="middle" fill="#fb923c" font-size="15" font-weight="800" font-family="Arial, sans-serif">FROM £1.50/KG</text>
+  </g>
+</svg>
