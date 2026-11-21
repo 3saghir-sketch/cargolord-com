@@ -19,7 +19,7 @@ const WA_ISSUES: [string, string][] = [
 ]
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '', company_website: '' })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
@@ -44,7 +44,7 @@ export default function Contact() {
       const res = await fetch('/api/submit-lead/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description }),
+        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description, company_website: form.company_website }),
       })
       const data = await res.json()
       if (data.success) {
@@ -144,6 +144,21 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <h2 className="font-heading font-bold text-navy-800 text-2xl mb-6">Send a Message</h2>
+
+                  {/* Honeypot -- hidden from real visitors, bots that auto-fill every field catch themselves here */}
+                  <div style={{ position: 'absolute', left: '-9999px', width: 0, height: 0, overflow: 'hidden' }} aria-hidden="true">
+                    <label htmlFor="company_website">Company Website</label>
+                    <input
+                      id="company_website"
+                      name="company_website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={form.company_website}
+                      onChange={handleChange}
+                    />
+                  </div>
+
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">Name *</label>

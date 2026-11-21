@@ -12,6 +12,9 @@ type LeadPayload = {
   email?: string
   phone?: string
   description: string
+  // Honeypot: a field real visitors never see or fill in. Bots that
+  // auto-fill every input on the form will fill this one too.
+  company_website?: string
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -20,7 +23,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return
   }
 
-  const { name, email, phone, description } = req.body as LeadPayload
+  const { name, email, phone, description, company_website } = req.body as LeadPayload
+
+  // Bot caught by the honeypot -- pretend success so it doesn't learn to
+  // adapt, but never actually forward it to the CRM.
+  if (company_website) {
+    res.status(200).json({ success: true })
+    return
+  }
 
   if (!name || !description) {
     res.status(422).json({ success: false, message: 'Missing required fields' })

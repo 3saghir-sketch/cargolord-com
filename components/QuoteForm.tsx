@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export default function QuoteForm() {
   const [form, setForm] = useState({
-    name: '', email: '', phone: '', from: '', to: '', service: '', weight: '', message: '',
+    name: '', email: '', phone: '', from: '', to: '', service: '', weight: '', message: '', company_website: '',
   })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -30,7 +30,7 @@ export default function QuoteForm() {
       const res = await fetch('/api/submit-lead/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description }),
+        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description, company_website: form.company_website }),
       })
       const data = await res.json()
       if (data.success) {
@@ -96,6 +96,20 @@ export default function QuoteForm() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <h3 className="font-heading font-bold text-navy-800 text-2xl mb-6 border-b border-gray-100 pb-4">Request a Quote</h3>
+
+                {/* Honeypot -- hidden from real visitors, bots that auto-fill every field catch themselves here */}
+                <div style={{ position: 'absolute', left: '-9999px', width: 0, height: 0, overflow: 'hidden' }} aria-hidden="true">
+                  <label htmlFor="company_website">Company Website</label>
+                  <input
+                    id="company_website"
+                    name="company_website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={form.company_website}
+                    onChange={handleChange}
+                  />
+                </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
