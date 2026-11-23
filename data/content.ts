@@ -497,6 +497,35 @@ Flying home for a wedding or visiting family shouldn't result in a financial hea
 
 Need help with your luggage? Get an instant quote or contact our Birmingham team today to book your collection.`,
   },
+  {
+    slug: 'full-container-vs-shared-cargo-pakistan',
+    title: 'Full Container or Shared Cargo? Choosing the Right Way to Move to Pakistan or India',
+    date: '2026-11-23',
+    category: 'Shipping Guide',
+    excerpt: "Moving your whole life abroad? Most families think they need a full container — but for most moves, shared cargo (consolidation) works out far cheaper and just as reliable. Here's how to tell which one you actually need.",
+    image: '/blog/container-vs-shared-cargo.jpg',
+    content: `Moving an entire life across the world is a massive step, and we know it can feel overwhelming. Many of our customers reach out thinking they need to book a whole container for their move to Pakistan or India, but usually, that ends up costing you much more than necessary.
+
+**You Don't Need to Pay for Empty Space**
+
+When you rent a private twenty-foot or forty-foot container for a smaller load, you are essentially paying to ship air. Beyond the ocean freight, you get hit with heavy charges at the port in Karachi for terminal handling and local fees. Then comes the struggle and expense of getting those twenty or thirty boxes from the port all the way to your doorstep. We don't want to see you waste your hard-earned money on logistics you don't need.
+
+**The Caring Alternative: Shared Shipping**
+
+For most families, our consolidation service is a much kinder option. You only pay for the exact space your belongings take up. We step in to take the stress off your shoulders: we collect your parcels directly from your home, weigh and barcode everything right in front of you so you have complete peace of mind, and provide an official receipt. We handle the transport to major UK ports, manage all the customs paperwork, and ensure your items are safely delivered to your family's door. It's a smooth, reliable process that saves you money and spares you from the headache of managing a container.
+
+**When Is a Full Container Truly Needed?**
+
+A private container really only makes sense for major life events, such as a permanent relocation under the Transfer of Residence scheme. If you are moving an entire household — including furniture, appliances, personal items, and perhaps a vehicle — then a dedicated container is the right choice.
+
+Just keep in mind that the logistics require careful planning: the container stays on the delivery lorry and cannot be placed on the ground. You must ensure there is ample space for the vehicle to park, and you typically have a strict three-hour window for loading before detention charges begin. Everything must be packed securely to withstand the long journey.
+
+**We Are Here to Support Your Journey**
+
+Whether you are sending a few forgotten boxes or embarking on a fresh start abroad, navigating customs and shipping doesn't have to be stressful. We maintain strong personal connections across Pakistan, Bangladesh, India, and the Middle East to ensure your belongings are treated with care every step of the way.
+
+Planning your shipment? Request a quote or contact our Birmingham team today — we are always here to help.`,
+  },
 ]
 
 // Tracking statuses — matches the stage names used across the CRM/ops
