@@ -1,12 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function QuoteForm() {
+  const router = useRouter()
   const [form, setForm] = useState({
     name: '', email: '', phone: '', from: '', to: '', service: '', weight: '', message: '', company_website: '',
   })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
+
+  // Lets other pages (e.g. /rates) deep-link straight into a pre-selected
+  // service, like ?service=Sea%20Cargo, instead of landing on a blank form.
+  useEffect(() => {
+    const service = router.query.service
+    if (typeof service === 'string') {
+      setForm((f) => ({ ...f, service }))
+    }
+  }, [router.query.service])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })

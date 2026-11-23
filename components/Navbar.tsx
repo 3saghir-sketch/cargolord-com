@@ -14,6 +14,7 @@ const navLinks = [
     ],
   },
   { label: 'Tracking', href: '/tracking' },
+  { label: 'Rates', href: '/rates' },
   { label: 'About', href: '/about' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },

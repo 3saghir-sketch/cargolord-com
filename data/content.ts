@@ -560,3 +560,34 @@ export const impactStats = [
   { value: 2000000, suffix: '+', label: 'KG Shipped', sublabel: 'to Pakistan, India & Europe' },
   { value: 42000, suffix: '+', label: 'Shipments Delivered', sublabel: 'since 2015' },
 ]
+
+// Rates last reviewed 2026-11-23 -- shown on /rates with an explicit
+// "subject to change" notice so an old screenshot never gets treated as a
+// locked-in quote months later.
+export const cargoRates = {
+  lastReviewed: '2026-11-23',
+  sea: {
+    title: 'Sea Cargo Rates',
+    delivery: '10–12 Weeks Delivery',
+    quoteService: 'Sea Cargo',
+    items: [
+      { label: 'Clothes & Shoes', note: '(£1.35/kg over 100kg)', price: '£1.50/kg' },
+      { label: 'Bulky Items', note: '(Duvets, Blankets, Pillows, Nappies)', price: '£2.50/kg' },
+      { label: 'Flat-Pack Furniture, Plastic & Wood', note: '', price: '£2.50/kg' },
+      { label: 'Electrical Items', note: '(excl. TVs & Laptops)', price: '£3.50/kg' },
+      { label: 'Sack', note: '', price: '£3 each' },
+    ],
+    footnote: 'Food: Sent at your own risk. Large quantities may be detained by Pakistan Customs.',
+  },
+  air: {
+    title: 'Air Cargo Rates',
+    delivery: '10–12 Days Delivery',
+    quoteService: 'Door to Door Air Cargo',
+    items: [
+      { label: 'Standard Air Rate', note: '+ £20 Handling Charges', price: '£7.50/kg' },
+      { label: 'Minimum Chargeable Weight', note: '', price: '11 kg' },
+      { label: 'Packaging', note: '', price: 'Cardboard boxes or suitcases' },
+    ],
+    footnote: '',
+  },
+}
