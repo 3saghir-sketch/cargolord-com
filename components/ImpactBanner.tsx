@@ -2,29 +2,22 @@ import { useEffect, useRef, useState } from 'react'
 import { impactStats } from '../data/content'
 
 function BigCounter({ value, suffix }: { value: number; suffix: string }) {
-  const [count, setCount] = useState(0)
+  // Animates on mount rather than waiting for scroll-into-view - see
+  // StatsSection.tsx's Counter for why (crawlers/screenshots catching 0).
+  const [count, setCount] = useState(value)
   const ref = useRef<HTMLDivElement>(null)
-  const started = useRef(false)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true
-          const duration = 1800
-          const step = Math.ceil(value / (duration / 16))
-          let current = 0
-          const timer = setInterval(() => {
-            current = Math.min(current + step, value)
-            setCount(current)
-            if (current >= value) clearInterval(timer)
-          }, 16)
-        }
-      },
-      { threshold: 0.3 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
+    const duration = 1800
+    const step = Math.ceil(value / (duration / 16))
+    let current = 0
+    setCount(0)
+    const timer = setInterval(() => {
+      current = Math.min(current + step, value)
+      setCount(current)
+      if (current >= value) clearInterval(timer)
+    }, 16)
+    return () => clearInterval(timer)
   }, [value])
 
   return (
