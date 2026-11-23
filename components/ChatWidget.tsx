@@ -42,15 +42,6 @@ export default function ChatWidget() {
         {open && (
           <div className="flex flex-col gap-2 w-72 max-w-[85vw]">
             <a
-              href="https://wa.me/441217900700?text=Hi%2C%20I%20have%20an%20issue%20with%20my%20shipment"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-orange-600 hover:bg-orange-700 text-white px-5 py-4 shadow-2xl rounded-lg font-heading font-bold text-base transition-all"
-            >
-              <span className="text-2xl">📦</span>
-              Existing Shipment Issue
-            </a>
-            <a
               href="https://wa.me/441213283232?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20cargo%20services."
               target="_blank"
               rel="noopener noreferrer"
@@ -58,6 +49,15 @@ export default function ChatWidget() {
             >
               <span className="text-2xl">💬</span>
               New Enquiry / Quote
+            </a>
+            <a
+              href="https://wa.me/441217900700?text=Hi%2C%20I%20have%20an%20issue%20with%20my%20shipment"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-orange-600 hover:bg-orange-700 text-white px-5 py-4 shadow-2xl rounded-lg font-heading font-bold text-base transition-all"
+            >
+              <span className="text-2xl">📦</span>
+              Existing Shipment Issue
             </a>
           </div>
         )}
