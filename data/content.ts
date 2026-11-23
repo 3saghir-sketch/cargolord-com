@@ -137,12 +137,35 @@ export const services = [
   },
 ]
 
-// Testimonials — intentionally empty. The source content on cargolord.com
-// used the same fabricated testimonial text under different names; the
-// Pakistan subpage was more honest and said "Genuine customer reviews
-// coming soon" instead. Keep that honesty here rather than inventing new
-// fake reviews — fill this in only with real collected reviews.
-export const testimonials: { name: string; location: string; rating: number; text: string }[] = []
+// Testimonials — pulled from Cargo Lord Ltd's real Google Business
+// reviews (Places API), positive ones only. Minor punctuation/typo
+// cleanup only; wording and meaning are the reviewer's own.
+export const testimonials: { name: string; location: string; rating: number; text: string }[] = [
+  {
+    name: 'Usman Bashir',
+    location: 'Google Review',
+    rating: 5,
+    text: "Amazing delivery and all items were in good condition when I received it in the UK. The staff were great from the Pakistan cargo side and were very thoughtful and respectful towards my order — would always recommend using these guys when shipping items from Pakistan to UK. Great price and service.",
+  },
+  {
+    name: 'Muhammad Latif',
+    location: 'Google Review',
+    rating: 5,
+    text: "Thanks to Cargo Lord for the excellent service. I received my parcel in Pakistan safely and on time. Everything was very well packed by the UK team, and the whole process was smooth. I really appreciate the care and professionalism. Highly recommended!",
+  },
+  {
+    name: 'Saima Ijaz',
+    location: 'Google Review',
+    rating: 5,
+    text: "Very reliable and trustworthy cargo service. Especially Mr. Awais Jeffri is very supportive and helpful.",
+  },
+  {
+    name: 'Iqra Bibi',
+    location: 'Google Review',
+    rating: 5,
+    text: "Imran Sarwar is so friendly, a good guy, very helpful — good customer service!",
+  },
+]
 
 // Blog posts — the old cargolord.com posts were dated 2024 and tied to
 // since-unverifiable pricing claims, so none were carried over. These five
