@@ -1,8 +1,29 @@
+import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
 import '../styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
+  // Tracks every phone/WhatsApp link click site-wide as a conversion signal,
+  // via event delegation on document - so new tel:/wa.me links added to any
+  // page or component are tracked automatically, with no per-link changes.
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      const link = (e.target as HTMLElement)?.closest('a')
+      if (!link) return
+      const href = link.getAttribute('href') || ''
+      const gtag = (window as any).gtag
+      if (!gtag) return
+      if (href.startsWith('tel:')) {
+        gtag('event', 'generate_lead', { form: 'phone_click', value: href.replace('tel:', '') })
+      } else if (href.includes('wa.me')) {
+        gtag('event', 'generate_lead', { form: 'whatsapp_click' })
+      }
+    }
+    document.addEventListener('click', handler)
+    return () => document.removeEventListener('click', handler)
+  }, [])
+
   return (
     <>
       <DefaultSeo
