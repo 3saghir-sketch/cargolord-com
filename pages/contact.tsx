@@ -19,7 +19,7 @@ const WA_ISSUES: [string, string][] = [
 ]
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '', company_website: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '', cl_extra_ref: '' })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
@@ -76,7 +76,7 @@ export default function Contact() {
       const res = await fetch('/api/submit-lead/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description, company_website: form.company_website }),
+        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description, company_website: form.cl_extra_ref }),
       })
       const data = await res.json()
       if (data.success) {
@@ -188,16 +188,16 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <h2 className="font-heading font-bold text-navy-800 text-2xl mb-6">Send a Message</h2>
 
-                  {/* Honeypot -- hidden from real visitors, bots that auto-fill every field catch themselves here */}
+                  {/* Honeypot -- see QuoteForm.tsx for why this isn't named/labelled "company_website" */}
                   <div style={{ position: 'absolute', left: '-9999px', width: 0, height: 0, overflow: 'hidden' }} aria-hidden="true">
-                    <label htmlFor="company_website">Company Website</label>
+                    <label htmlFor="cl_extra_ref">Leave this field blank</label>
                     <input
-                      id="company_website"
-                      name="company_website"
+                      id="cl_extra_ref"
+                      name="cl_extra_ref"
                       type="text"
                       tabIndex={-1}
                       autoComplete="off"
-                      value={form.company_website}
+                      value={form.cl_extra_ref}
                       onChange={handleChange}
                     />
                   </div>

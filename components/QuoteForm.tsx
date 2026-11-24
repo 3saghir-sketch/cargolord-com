@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 export default function QuoteForm() {
   const router = useRouter()
   const [form, setForm] = useState({
-    name: '', email: '', phone: '', from: '', to: '', service: '', weight: '', message: '', company_website: '',
+    name: '', email: '', phone: '', from: '', to: '', service: '', weight: '', message: '', cl_extra_ref: '',
   })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -41,7 +41,7 @@ export default function QuoteForm() {
       const res = await fetch('/api/submit-lead/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description, company_website: form.company_website }),
+        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, description, company_website: form.cl_extra_ref }),
       })
       const data = await res.json()
       if (data.success) {
@@ -108,16 +108,20 @@ export default function QuoteForm() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <h3 className="font-heading font-bold text-navy-800 text-2xl mb-6 border-b border-gray-100 pb-4">Request a Quote</h3>
 
-                {/* Honeypot -- hidden from real visitors, bots that auto-fill every field catch themselves here */}
+                {/* Honeypot -- hidden from real visitors, bots that auto-fill every field catch themselves here.
+                    BUG FIX: this used to be named/labelled "company_website", which Chrome's autofill
+                    heuristics recognise and will silently fill in for real visitors with saved company
+                    info -- submission still "succeeds" visually but silently gets dropped as a bot. Renamed
+                    to something no autofill heuristic matches. */}
                 <div style={{ position: 'absolute', left: '-9999px', width: 0, height: 0, overflow: 'hidden' }} aria-hidden="true">
-                  <label htmlFor="company_website">Company Website</label>
+                  <label htmlFor="cl_extra_ref">Leave this field blank</label>
                   <input
-                    id="company_website"
-                    name="company_website"
+                    id="cl_extra_ref"
+                    name="cl_extra_ref"
                     type="text"
                     tabIndex={-1}
                     autoComplete="off"
-                    value={form.company_website}
+                    value={form.cl_extra_ref}
                     onChange={handleChange}
                   />
                 </div>
