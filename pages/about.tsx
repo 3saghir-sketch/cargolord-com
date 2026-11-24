@@ -54,7 +54,7 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="About Cargo Lord Ltd"
+        title="About Us"
         description="Cargo Lord Ltd was founded in Birmingham in 2012 by Saghir Bukhari. Learn about our story, our team, and our mission to deliver affordable cargo between the UK and Pakistan."
         canonical="https://cargolord.com/about/"
       />

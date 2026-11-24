@@ -23,7 +23,9 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="robots" content="index, follow" />
+        {/* robots meta is left to next-seo's DefaultSeo/NextSeo per page -
+            a second hardcoded one here would always say index,follow and
+            could contradict a future page that sets noindex. */}
         <meta name="geo.region" content="GB-WMD" />
         <meta name="geo.placename" content="Birmingham" />
       </Head>
