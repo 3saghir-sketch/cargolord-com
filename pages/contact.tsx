@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import PageHeader from '../components/PageHeader'
 import Footer from '../components/Footer'
@@ -27,6 +27,9 @@ export default function Contact() {
   const [issuePin, setIssuePin] = useState('')
   const [verifying, setVerifying] = useState(false)
   const [verifyError, setVerifyError] = useState('')
+  // See QuoteForm.tsx -- synchronous guard against the duplicate-lead
+  // double-submit race that `disabled={sending}` alone doesn't fully close.
+  const submittingRef = useRef(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -63,6 +66,8 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (submittingRef.current) return
+    submittingRef.current = true
     setSending(true)
     setError(false)
 
@@ -90,6 +95,7 @@ export default function Contact() {
     } catch {
       setError(true)
     } finally {
+      submittingRef.current = false
       setSending(false)
     }
   }

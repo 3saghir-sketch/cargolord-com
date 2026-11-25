@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 
 export default function QuoteForm() {
@@ -9,6 +9,11 @@ export default function QuoteForm() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
+  // A plain ref, not state -- updates synchronously, so it closes the race
+  // window a fast double-click/double-Enter has against `disabled={sending}`
+  // (state updates are async, so two submits can both fire before the button
+  // actually becomes disabled). This is what created duplicate leads before.
+  const submittingRef = useRef(false)
 
   // Lets other pages (e.g. /rates) deep-link straight into a pre-selected
   // service, like ?service=Sea%20Cargo, instead of landing on a blank form.
@@ -25,6 +30,8 @@ export default function QuoteForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (submittingRef.current) return
+    submittingRef.current = true
     setSending(true)
     setError(false)
 
@@ -55,6 +62,7 @@ export default function QuoteForm() {
     } catch {
       setError(true)
     } finally {
+      submittingRef.current = false
       setSending(false)
     }
   }
